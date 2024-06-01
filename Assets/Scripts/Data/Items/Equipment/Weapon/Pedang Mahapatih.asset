@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Pedang Mahapatih
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Pedang Mahapatih
+  icon: {fileID: 21300000, guid: 1ff1175d56df9eb4f8cfa0ba429d9254, type: 3}
+  itemID: 2e9da4307758cf3a297f20e36cd73b29
+  dropChance: 0.9
+  tipeEquiment: 0
+  itemCooldown: 4
+  itemEfek:
+  - {fileID: 11400000, guid: 65fae13234816510a8e0eddd41d5d2bf, type: 2}
+  ketangkasan: 0
+  kelincahan: 0
+  kecerdasan: 0
+  energi: 0
+  damage: 20
+  critChance: 20
+  critPower: 50
+  maxHealth: 0
+  pelindung: 0
+  penghindar: 0
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightingDamage: 20
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: a5da0cbdcfd5d0494863a0da4a9f76e4, type: 2}
+    jumlahStack: 5

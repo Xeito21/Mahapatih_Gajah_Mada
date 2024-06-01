@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Pedang Klewang
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Pedang Klewang
+  icon: {fileID: 21300000, guid: 158be32ff2ccad14e8831bd617f89478, type: 3}
+  itemID: 8467a3d74d2a6ca8dae495a8b81d2ef6
+  dropChance: 35.6
+  tipeEquiment: 0
+  itemCooldown: 0
+  itemEfek:
+  - {fileID: 11400000, guid: a9a121dd387dac284a76589bed58cf2d, type: 2}
+  ketangkasan: 0
+  kelincahan: 0
+  kecerdasan: 0
+  energi: 0
+  damage: 15
+  critChance: 0
+  critPower: 0
+  maxHealth: 0
+  pelindung: 0
+  penghindar: 0
+  magicResistance: 0
+  fireDamage: 5
+  iceDamage: 0
+  lightingDamage: 0
+  craftingMaterials: []

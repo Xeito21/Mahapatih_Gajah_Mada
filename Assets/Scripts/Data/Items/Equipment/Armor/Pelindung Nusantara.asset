@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Pelindung Nusantara
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Pelindung Nusantara
+  icon: {fileID: 21300000, guid: 28b103e16acf21b45afc90eb7afb7e42, type: 3}
+  itemID: 2c25a67ca5516844ab7f3ba80f089665
+  dropChance: 0
+  tipeEquiment: 1
+  itemCooldown: 0
+  itemEfek: []
+  ketangkasan: 20
+  kelincahan: 5
+  kecerdasan: 5
+  energi: 10
+  damage: 0
+  critChance: 0
+  critPower: 0
+  maxHealth: 0
+  pelindung: 20
+  penghindar: 0
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightingDamage: 0
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: 93525aeb963f2444c9c96d439db75579, type: 2}
+    jumlahStack: 3

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Bhumi Mataram
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Bhumi Mataram
+  icon: {fileID: 21300000, guid: 131ae7d5c3bf62f4ca9d47f57e1ef952, type: 3}
+  itemID: aa27d5d18d5972a419b6f622d9804dbb
+  dropChance: 30
+  tipeEquiment: 1
+  itemCooldown: 0
+  itemEfek: []
+  ketangkasan: 0
+  kelincahan: 0
+  kecerdasan: 0
+  energi: 30
+  damage: 10
+  critChance: 0
+  critPower: 0
+  maxHealth: 0
+  pelindung: 50
+  penghindar: 20
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightingDamage: 0
+  craftingMaterials: []

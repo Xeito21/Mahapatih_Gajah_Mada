@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Pedang Wiranagara
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Pedang Wiranagara
+  icon: {fileID: 21300000, guid: 789e518168d493d4396ec984b1b5bcb3, type: 3}
+  itemID: 1b3a4bed777a3d87f951326f694b9d7a
+  dropChance: 12.1
+  tipeEquiment: 0
+  itemCooldown: 0
+  itemEfek:
+  - {fileID: 11400000, guid: a9a121dd387dac284a76589bed58cf2d, type: 2}
+  ketangkasan: 0
+  kelincahan: 0
+  kecerdasan: 0
+  energi: 0
+  damage: 10
+  critChance: 5
+  critPower: 20
+  maxHealth: 0
+  pelindung: 0
+  penghindar: 0
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 3
+  lightingDamage: 0
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: 495ffa7afc30b1e41bd3d9866722a398, type: 2}
+    jumlahStack: 2

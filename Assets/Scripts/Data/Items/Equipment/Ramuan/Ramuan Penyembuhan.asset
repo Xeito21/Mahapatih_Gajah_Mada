@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b898813cdabbfd28b3f291e9bc4fd85, type: 3}
+  m_Name: Ramuan Penyembuhan
+  m_EditorClassIdentifier: 
+  itemType: 1
+  namaItem: Ramuan Penyembuhan
+  icon: {fileID: 21300000, guid: beae478f276b7abf68c711296734d0c4, type: 3}
+  itemID: 327d39a23b32237b197ae08dfc19b3a2
+  dropChance: 0
+  tipeEquiment: 3
+  itemCooldown: 5
+  itemEfek:
+  - {fileID: 11400000, guid: 49e42fff67908b221b7231d08f58555c, type: 2}
+  ketangkasan: 0
+  kelincahan: 0
+  kecerdasan: 0
+  energi: 0
+  damage: 0
+  critChance: 0
+  critPower: 0
+  maxHealth: 0
+  pelindung: 0
+  penghindar: 0
+  magicResistance: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightingDamage: 0
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: 495ffa7afc30b1e41bd3d9866722a398, type: 2}
+    jumlahStack: 1
