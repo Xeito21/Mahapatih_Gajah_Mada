@@ -17,6 +17,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     [SerializeField] private GameObject optionsUI;
     [SerializeField] public GameObject hudUI;
     [SerializeField] private GameObject WinUI;
+    [SerializeField] private GameObject popupUI;
 
     public TextMeshProUGUI PopupTextInfo;
 
@@ -45,6 +46,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     void Start()
     {
         SwitchTo(hudUI);
+        popupUI.SetActive(true);
         itemToolTips.gameObject.SetActive(false);
         statToolTip.gameObject.SetActive(false);
 
