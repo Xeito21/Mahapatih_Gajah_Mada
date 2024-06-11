@@ -17,10 +17,13 @@ public class RelikChest : MonoBehaviour
     [SerializeField] private GameObject inputPrompt;
     [SerializeField] private float fadeDuration = 1f; // Durasi fading
     [SerializeField] private AnimationCurve fadeCurve; // Kurva fading
+    [SerializeField] private float enemyCheckRadius = 5f; // Radius untuk deteksi musuh
+    [SerializeField] private LayerMask enemyLayerMask; // Layer mask untuk musuh
     public List<DropItem> dropItems = new List<DropItem>(); // List item yang mungkin di-drop
     private List<GameObject> itemsToSpawn = new List<GameObject>();
     private bool isPlayerInRange = false;
-    private bool isOpened;
+    private bool isEnemyNearby = false;
+    private bool isOpened = false;
     private Animator chestAnimator;
 
     private void Start()
@@ -37,8 +40,15 @@ public class RelikChest : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            
-            TryInteract();
+            if (isEnemyNearby)
+            {
+                AudioManager.instance.PlaySFX(35, null);
+                User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText("Kalahkan Prajurit tersebut!"));
+            }
+            else
+            {
+                TryInteract();
+            }
         }
     }
 
@@ -50,6 +60,8 @@ public class RelikChest : MonoBehaviour
         {
             Interact(item);
         }
+
+        isOpened = true;
     }
 
     /* private DropItem ChooseItemToDrop()
@@ -79,6 +91,8 @@ public class RelikChest : MonoBehaviour
 
     private void Interact(GameObject item)
     {
+        if (isOpened == true)
+            return;
         if (item != null)
         {
             AudioManager.instance.PlaySFX(38, null);
@@ -157,6 +171,19 @@ public class RelikChest : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private bool IsEnemyNearby()
+    {
+        Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(transform.position, enemyCheckRadius, enemyLayerMask);
+        foreach (Collider2D collider in enemyColliders)
+        {
+            if (collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -164,6 +191,7 @@ public class RelikChest : MonoBehaviour
         {
             isPlayerInRange = true;
             inputPrompt.gameObject.SetActive(true);
+            isEnemyNearby = IsEnemyNearby();
         }
     }
 
@@ -172,7 +200,15 @@ public class RelikChest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            isEnemyNearby = false;
             inputPrompt.gameObject.SetActive(false);
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        // Menggambar gizmo berbentuk lingkaran untuk deteksi musuh
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, enemyCheckRadius);
     }
 }

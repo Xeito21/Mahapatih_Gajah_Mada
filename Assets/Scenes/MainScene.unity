@@ -58373,6 +58373,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1315773052}
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: enemyCheckRadius
+      value: 11.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: fadeCurve.m_PostInfinity
       value: 2
       objectReference: {fileID: 0}
@@ -59564,11 +59572,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 672621409132324112, guid: d195334f41a9636c091f70acf8c8f045, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.13
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 672621409132324112, guid: d195334f41a9636c091f70acf8c8f045, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 672621409132324112, guid: d195334f41a9636c091f70acf8c8f045, type: 3}
       propertyPath: m_LocalPosition.z
