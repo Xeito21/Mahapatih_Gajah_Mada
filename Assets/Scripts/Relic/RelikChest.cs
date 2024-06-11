@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class RelikChest : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class RelikChest : MonoBehaviour
         public float dropChance; // Peluang item muncul
     }
 
+    [SerializeField] private TextMeshProUGUI interactPrompt; // UI Text untuk prompt interaksi
+    [SerializeField] private GameObject inputPrompt;
+    [SerializeField] private float fadeDuration = 1f; // Durasi fading
+    [SerializeField] private AnimationCurve fadeCurve; // Kurva fading
     public List<DropItem> dropItems = new List<DropItem>(); // List item yang mungkin di-drop
     private List<GameObject> itemsToSpawn = new List<GameObject>();
-    [SerializeField] private TextMeshProUGUI interactPrompt; // UI Text untuk prompt interaksi
     private bool isPlayerInRange = false;
+    private bool isOpened;
     private Animator chestAnimator;
 
     private void Start()
@@ -32,6 +37,7 @@ public class RelikChest : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            
             TryInteract();
         }
     }
@@ -75,6 +81,8 @@ public class RelikChest : MonoBehaviour
     {
         if (item != null)
         {
+            AudioManager.instance.PlaySFX(38, null);
+            inputPrompt.gameObject.SetActive(false);
             GameObject spawnedItem = Instantiate(item, transform.position, Quaternion.identity);
             Rigidbody2D itemRigidbody = spawnedItem.GetComponent<Rigidbody2D>();
 
@@ -96,6 +104,8 @@ public class RelikChest : MonoBehaviour
             itemRigidbody.AddForce(forceDirection * randomForce, ForceMode2D.Impulse);
 
             chestAnimator.SetBool("isOpen", true); // Mengaktifkan animasi terbuka pada chest
+            User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText("Harta Karun Terbuka!"));
+            StartCoroutine(FadeAndDestroy());
         }
     }
 
@@ -114,16 +124,46 @@ public class RelikChest : MonoBehaviour
         return selectedItems;
     }
 
+    private IEnumerator FadeAndDestroy()
+    {
+        float timer = 0f;
+        Renderer renderer = GetComponentInChildren<Renderer>();
+
+        // Mendapatkan opacity awal
+        Color initialColor = renderer.material.color;
+
+        while (timer < fadeDuration)
+        {
+            // Menghitung progress fading
+            float progress = timer / fadeDuration;
+
+            // Menerapkan fading menggunakan kurva yang dipilih
+            float opacity = fadeCurve.Evaluate(progress);
+            Color fadeColor = new Color(initialColor.r, initialColor.g, initialColor.b, opacity);
+            renderer.material.color = fadeColor;
+
+            // Menunggu frame selanjutnya
+            yield return null;
+
+            // Mengupdate timer
+            timer += Time.deltaTime;
+        }
+
+        // Set opacity ke 0 (transparan)
+        Color transparentColor = new Color(initialColor.r, initialColor.g, initialColor.b, 0f);
+        renderer.material.color = transparentColor;
+
+        // Hapus chest setelah fading selesai
+        Destroy(gameObject);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (interactPrompt != null)
-            {
-                interactPrompt.gameObject.SetActive(true);
-            }
+            inputPrompt.gameObject.SetActive(true);
         }
     }
 
@@ -132,10 +172,7 @@ public class RelikChest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            if (interactPrompt != null)
-            {
-                interactPrompt.gameObject.SetActive(false);
-            }
+            inputPrompt.gameObject.SetActive(false);
         }
     }
 }
