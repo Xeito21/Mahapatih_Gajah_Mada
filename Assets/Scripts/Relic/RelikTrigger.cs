@@ -12,6 +12,7 @@ public class RelikTrigger : MonoBehaviour
             // Panggil metode UpdateInfo dari GameController dengan indeks item yang sesuai
             relikController.ShowUI(true);
             relikController.UpdateInfo(itemIndex);
+            Destroy(transform.parent.gameObject);
         }
     }
 }

@@ -198,6 +198,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59cd445431ab6204789a893fed00eedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPrompt: {fileID: 0}
+  inputPrompt: {fileID: 5880649011438271527}
+  fadeDuration: 3
+  fadeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.42041737
+      outSlope: -0.42041737
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6618968
+      value: 0.7217271
+      inSlope: -1.2977118
+      outSlope: -1.2977118
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0208334
+      value: -0.058962226
+      inSlope: -2.1750064
+      outSlope: -2.1750064
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enemyCheckRadius: 11.62
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   dropItems:
   - item: {fileID: 8456362537702663035, guid: 2630843665ef53941b4f5a0b9c7ea2ed, type: 3}
     dropChance: 0.6
@@ -205,8 +245,6 @@ MonoBehaviour:
     dropChance: 0.2
   - item: {fileID: 8456362537702663035, guid: 2630843665ef53941b4f5a0b9c7ea2ed, type: 3}
     dropChance: 0.1
-  interactPrompt: {fileID: 0}
-  inputPrompt: {fileID: 0}
 --- !u!1 &5880649011438271527
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8838476775838751157
 Transform:
   m_ObjectHideFlags: 0

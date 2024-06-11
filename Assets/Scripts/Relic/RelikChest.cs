@@ -9,7 +9,7 @@ public class RelikChest : MonoBehaviour
     [System.Serializable]
     public class DropItem
     {
-        public GameObject item;// Prefab atau GameObject yang akan dikeluarkan
+        public GameObject item; // Prefab atau GameObject yang akan dikeluarkan
         public float dropChance; // Peluang item muncul
     }
 
@@ -19,8 +19,8 @@ public class RelikChest : MonoBehaviour
     [SerializeField] private AnimationCurve fadeCurve; // Kurva fading
     [SerializeField] private float enemyCheckRadius = 5f; // Radius untuk deteksi musuh
     [SerializeField] private LayerMask enemyLayerMask; // Layer mask untuk musuh
+    [SerializeField] private int gobogDrop;
     public List<DropItem> dropItems = new List<DropItem>(); // List item yang mungkin di-drop
-    private List<GameObject> itemsToSpawn = new List<GameObject>();
     private bool isPlayerInRange = false;
     private bool isEnemyNearby = false;
     private bool isOpened = false;
@@ -64,56 +64,28 @@ public class RelikChest : MonoBehaviour
         isOpened = true;
     }
 
-    /* private DropItem ChooseItemToDrop()
-    {
-        float totalChance = 0f;
-
-        foreach (var item in dropItems)
-        {
-            totalChance += item.dropChance;
-        }
-
-        float randomValue = Random.Range(0f, totalChance);
-
-        foreach (var item in dropItems)
-        {
-            if (randomValue <= item.dropChance)
-            {
-                return item;
-            }
-
-            randomValue -= item.dropChance;
-        }
-
-        return null;
-    }
-    */
-
     private void Interact(GameObject item)
     {
-        if (isOpened == true)
+        if (isOpened) // Memastikan item tidak diinstansiasi lagi jika sudah diambil
             return;
+
         if (item != null)
         {
             AudioManager.instance.PlaySFX(38, null);
+            PlayerManager.instance.currency += gobogDrop;
             inputPrompt.gameObject.SetActive(false);
             GameObject spawnedItem = Instantiate(item, transform.position, Quaternion.identity);
+
             Rigidbody2D itemRigidbody = spawnedItem.GetComponent<Rigidbody2D>();
 
             if (itemRigidbody == null)
             {
-                // Tambahkan komponen Rigidbody jika belum ada
                 itemRigidbody = spawnedItem.AddComponent<Rigidbody2D>();
             }
-
-            // Buat nilai acak untuk gaya dari 1f hingga 6f
             float randomForce = Random.Range(1f, 6f);
-
-            // Buat nilai acak untuk arah gaya
             float randomDirection = Random.Range(0f, 1f);
             Vector3 forceDirection = (randomDirection < 0.5f) ? Vector3.left : Vector3.right;
 
-            // Tambahkan gaya ke item agar terlempar ke atas, kanan, atau kiri dengan gaya acak
             itemRigidbody.AddForce(Vector3.up * randomForce, ForceMode2D.Impulse);
             itemRigidbody.AddForce(forceDirection * randomForce, ForceMode2D.Impulse);
 
@@ -169,6 +141,7 @@ public class RelikChest : MonoBehaviour
 
         // Hapus chest setelah fading selesai
         Destroy(gameObject);
+        isOpened = false;
     }
 
     private bool IsEnemyNearby()
@@ -183,7 +156,6 @@ public class RelikChest : MonoBehaviour
         }
         return false;
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

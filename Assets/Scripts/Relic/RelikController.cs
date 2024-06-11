@@ -10,6 +10,7 @@ public class RelikController : MonoBehaviour
     {
         public Sprite image;
         public string title;
+        [TextArea]
         public string description;
     }
 
