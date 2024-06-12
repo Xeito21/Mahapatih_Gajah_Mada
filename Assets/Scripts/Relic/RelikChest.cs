@@ -9,18 +9,18 @@ public class RelikChest : MonoBehaviour
     [System.Serializable]
     public class DropItem
     {
-        public GameObject item; // Prefab atau GameObject yang akan dikeluarkan
-        public float dropChance; // Peluang item muncul
+        public GameObject item;
+        public float dropChanceRelik;
     }
 
-    [SerializeField] private TextMeshProUGUI interactPrompt; // UI Text untuk prompt interaksi
+    [SerializeField] private TextMeshProUGUI interactPrompt;
     [SerializeField] private GameObject inputPrompt;
-    [SerializeField] private float fadeDuration = 1f; // Durasi fading
-    [SerializeField] private AnimationCurve fadeCurve; // Kurva fading
-    [SerializeField] private float enemyCheckRadius = 5f; // Radius untuk deteksi musuh
-    [SerializeField] private LayerMask enemyLayerMask; // Layer mask untuk musuh
+    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private AnimationCurve fadeCurve;
+    [SerializeField] private float enemyCheckRadius = 5f;
+    [SerializeField] private LayerMask enemyLayerMask; 
     [SerializeField] private int gobogDrop;
-    public List<DropItem> dropItems = new List<DropItem>(); // List item yang mungkin di-drop
+    public List<DropItem> dropRelik = new List<DropItem>();
     private bool isPlayerInRange = false;
     private bool isEnemyNearby = false;
     private bool isOpened = false;
@@ -43,7 +43,7 @@ public class RelikChest : MonoBehaviour
             if (isEnemyNearby)
             {
                 AudioManager.instance.PlaySFX(35, null);
-                User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText("Kalahkan Prajurit tersebut!"));
+                User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText("Harta karun masih terkunci!"));
             }
             else
             {
@@ -99,9 +99,9 @@ public class RelikChest : MonoBehaviour
     {
         List<GameObject> selectedItems = new List<GameObject>();
 
-        foreach (DropItem dropItem in dropItems)
+        foreach (DropItem dropItem in dropRelik)
         {
-            if (Random.value <= dropItem.dropChance)
+            if (Random.value <= dropItem.dropChanceRelik)
             {
                 selectedItems.Add(dropItem.item);
             }

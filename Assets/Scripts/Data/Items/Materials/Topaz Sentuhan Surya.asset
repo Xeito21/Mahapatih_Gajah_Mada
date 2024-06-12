@@ -16,4 +16,4 @@ MonoBehaviour:
   namaItem: Topaz Sentuhan Surya
   icon: {fileID: -1109189092, guid: 16b639548a93a544d8499d9b845c1b7b, type: 3}
   itemID: 93525aeb963f2444c9c96d439db75579
-  dropChance: 50
+  dropChance: 55

@@ -16,7 +16,7 @@ MonoBehaviour:
   namaItem: Pedang Bajrasakti
   icon: {fileID: 21300000, guid: 0d047a16ca0627f4c8781f0168dcc35a, type: 3}
   itemID: 0e21bd89b6d8f570987dcb3b98310314
-  dropChance: 45.3
+  dropChance: 39.6
   tipeEquiment: 0
   itemCooldown: 0
   itemEfek:

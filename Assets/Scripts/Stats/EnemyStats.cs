@@ -69,7 +69,7 @@ public class EnemyStats : CharacterStats
         QuestIsActive();
         PlayerManager.instance.currency += gobogDropAmount.GetValue();
         myDropSystem.GenerateDrop();
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
     }
 
     private void QuestIsActive()

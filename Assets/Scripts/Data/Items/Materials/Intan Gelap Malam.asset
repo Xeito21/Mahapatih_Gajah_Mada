@@ -16,4 +16,4 @@ MonoBehaviour:
   namaItem: Intan Gelap Malam
   icon: {fileID: -1395584389, guid: 16b639548a93a544d8499d9b845c1b7b, type: 3}
   itemID: e99239b200096f946a59ff6143038888
-  dropChance: 35
+  dropChance: 70
