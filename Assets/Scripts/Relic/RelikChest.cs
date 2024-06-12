@@ -172,8 +172,8 @@ public class RelikChest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            isEnemyNearby = false;
             inputPrompt.gameObject.SetActive(false);
+            isEnemyNearby = false;
         }
     }
 

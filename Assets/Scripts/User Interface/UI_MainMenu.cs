@@ -35,6 +35,12 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler
     public void MateriMenu()
     {
         StartCoroutine(LoadSceneWithEffect2(1.5f));
+        SceneManager.LoadScene(3);
+    }
+
+    public void IntroCutscene()
+    {
+        StartCoroutine(LoadSceneWithEffect2(1.5f));
         SceneManager.LoadScene(2);
     }
 
