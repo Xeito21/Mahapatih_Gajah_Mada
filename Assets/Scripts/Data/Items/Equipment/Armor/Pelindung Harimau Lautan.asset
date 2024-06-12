@@ -16,7 +16,7 @@ MonoBehaviour:
   namaItem: Harimau Lautan
   icon: {fileID: 21300000, guid: e29f293938fc0494d87d11a7532e32ea, type: 3}
   itemID: 05c508d92a91a4c1f9c4e7a32fd57a0a
-  dropChance: 0
+  dropChance: 24.3
   tipeEquiment: 1
   itemCooldown: 5
   itemEfek:

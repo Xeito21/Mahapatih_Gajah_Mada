@@ -16,7 +16,7 @@ MonoBehaviour:
   namaItem: Pedang Pusaka
   icon: {fileID: 21300000, guid: c278ec36abbc540489a08ba8765cd092, type: 3}
   itemID: d33face96ec7159cdb2cc665986a85f3
-  dropChance: 0
+  dropChance: 53.8
   tipeEquiment: 0
   itemCooldown: 0
   itemEfek:

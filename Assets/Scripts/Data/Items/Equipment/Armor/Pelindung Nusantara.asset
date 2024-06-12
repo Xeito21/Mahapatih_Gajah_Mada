@@ -16,7 +16,7 @@ MonoBehaviour:
   namaItem: Pelindung Nusantara
   icon: {fileID: 21300000, guid: 28b103e16acf21b45afc90eb7afb7e42, type: 3}
   itemID: 2c25a67ca5516844ab7f3ba80f089665
-  dropChance: 0
+  dropChance: 23.7
   tipeEquiment: 1
   itemCooldown: 0
   itemEfek: []

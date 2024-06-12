@@ -16,7 +16,7 @@ MonoBehaviour:
   namaItem: Kebesaran Gajah Mada
   icon: {fileID: 21300000, guid: 62b4a2f3dff4a9a4ba03a764d5fdd006, type: 3}
   itemID: 1dfbe6f59a07a2138aa00b169948a747
-  dropChance: 100
+  dropChance: 40.2
   tipeEquiment: 1
   itemCooldown: 0
   itemEfek: []

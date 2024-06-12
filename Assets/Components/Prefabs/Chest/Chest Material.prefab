@@ -217,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8245817125861441016}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.4, y: -7.42, z: -0.84908515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -258,7 +258,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.08, y: -0.51}
+  m_Offset: {x: 0.10108566, y: -0.51}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -269,7 +269,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.55}
+  m_Size: {x: 4.5787888, y: 0.54999995}
   m_EdgeRadius: 0
 --- !u!114 &7311102232215306226
 MonoBehaviour:
@@ -283,14 +283,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5d983a0de0abc438318d094314b770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gobogDrop: 200
+  gobogDrop: 150
   interactPrompt: {fileID: 0}
   inputPrompt: {fileID: 4744606892761909074}
   enemyCheckRadius: 5
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  fadeDuration: 1
+  fadeDuration: 5
   fadeCurve:
     serializedVersion: 2
     m_Curve:
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxItemsToDrop: 3
   itemPool:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e99239b200096f946a59ff6143038888, type: 2}
+  - {fileID: 11400000, guid: a5da0cbdcfd5d0494863a0da4a9f76e4, type: 2}
+  - {fileID: 11400000, guid: 495ffa7afc30b1e41bd3d9866722a398, type: 2}
+  - {fileID: 11400000, guid: 3efc7cd18d86a854892eee23f35d77de, type: 2}
   dropPrefab: {fileID: 8095516264970866842, guid: 621e892dd8666626ba4b23ad0bb4f91b, type: 3}
