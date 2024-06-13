@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: d103b3d3da93bcd3c848c11ceedddd1d
   - enabled: 1
-    path: Assets/Scenes/MateriMenu.unity
-    guid: a1538b2357409224eaf5bbffdd319869
-  - enabled: 1
     path: Assets/Scenes/IntroCutscene.unity
     guid: 2b2c6c60bd295e44db797859e35a06a9
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: fb8c9a662c836cb4881ce1ccf5a54982
+  - enabled: 1
+    path: Assets/Scenes/MateriMenu.unity
+    guid: a1538b2357409224eaf5bbffdd319869
   m_configObjects: {}

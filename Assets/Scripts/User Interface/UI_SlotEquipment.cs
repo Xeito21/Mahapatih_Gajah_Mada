@@ -13,6 +13,7 @@ public class UI_SlotEquipment : UI_SlotItem
         gameObject.name = "Equipment slot -" + slotType.ToString();
     }
 
+
     public override void OnPointerDown(PointerEventData eventData)
     {
         if(item == null || item.data == null)

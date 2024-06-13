@@ -28,7 +28,7 @@ public class QuestGoal
                 Debug.Log("Item Gathered! Current amount: " + currentAmount);
 
             UpdateUIQuest();
-            QuestGiver.instance.DisplayPopUpText(goalType == GoalType.Kill ? "Prajurit Terbunuh" : "Barang Terkumpul", currentAmount.ToString() + "/" + requiredAmount);
+            QuestGiver.instance.DisplayPopUpText(goalType == GoalType.Kill ? "Prajurit Terbunuh " : "Barang Terkumpul ", currentAmount.ToString() + "/" + requiredAmount);
         }
     }
 

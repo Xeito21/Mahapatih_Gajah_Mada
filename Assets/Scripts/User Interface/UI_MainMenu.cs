@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler
+public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private string sceneName = "MainScene";
     [SerializeField] private GameObject continueBtn;
@@ -12,8 +12,11 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler
     //[SerializeField] private ScrollView[] scrollView;
     [SerializeField] UI_FadeScreen fadeScreen;
 
+    private CursorUI setCursor;
+
     private void Start()
     {
+        setCursor = GetComponent<CursorUI>();
         if (SaveManager.instance.HasSavedData() == false)
             continueBtn.SetActive(false);
     }
@@ -34,14 +37,13 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler
 
     public void MateriMenu()
     {
-        StartCoroutine(LoadSceneWithEffect2(1.5f));
-        SceneManager.LoadScene(3);
+        StartCoroutine(LoadSceneMateriMenu(1.5f));
     }
 
     public void IntroCutscene()
     {
         StartCoroutine(LoadSceneWithEffect2(1.5f));
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void BackToMenu()
@@ -69,13 +71,26 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler
         yield return new WaitForSeconds(_delay);
     }
 
+    IEnumerator LoadSceneMateriMenu(float _delay)
+    {
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(_delay);
+        SceneManager.LoadScene(3);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         AudioManager.instance.PlaySFX(28, null);
+        setCursor.SetCursorPoint();
         if (buttonText != null)
         {
             buttonText.enabled = true;
         }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        setCursor.SetCustomCursor();
     }
 }
 

@@ -30,5 +30,6 @@ public class UI_SlotCraft : UI_SlotItem
     public override void OnPointerDown(PointerEventData eventData)
     {
         ui.craftWindow.SetupCraftWindow(item.data as ItemData_Equipment);
+        CursorUI.Instance.SetCursorPoint();
     }
 }

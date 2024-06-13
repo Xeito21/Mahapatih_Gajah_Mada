@@ -1,38 +1,32 @@
 INCLUDE global.ink
 
-Selamat datang, Gajah Mada! Kamu baru saja memasuki dunia kami yang penuh petualangan! #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-* [Halo] Apakah anda sudah mengerti memainkan ini? #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
--> main
 
-=== main ===
-+[ Tidak]
-    ~ playEmote("exclamation")
-    Baiklah, sebelum kamu melangkah lebih jauh, ada beberapa hal yang perlu kamu ketahui. Pertama, di dunia ini terdapat berbagai macam misi dan pencapaian yang dapat kamu raih.  #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-    -> continue2
-    = continue2
-    + [Lalu?]
-        Anda bisa menggerakan pemain menggunakan keyboard yaitu A dan D untuk berjalan #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-        -> continue3
-        =continue3
-        + [Cara Menyerang?]
-        ~ playEmote("exclamation")
-        oh iya! untuk cara menyerang menekan tombol J, itu gerakan dasar untuk sebagai pemain baru pada permainan ini. #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-        -> Paham
-
-=== Paham ===
-Apakah anda sudah paham? #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-+ [Paham]
--> PahamContinue
-+ [Tidak]
--> TidakPaham
-= PahamContinue
+~ playEmote("question")
+Salam sejahtera. Saya mendengar bahwa desa ini memerlukan bantuan. Apa yang bisa saya lakukan untuk membantu? #speaker:GajahMada #potrait:gajahmada_neutral #layout:left #audio:drawKnife1
+-> Kedua
+=== Kedua ===
+Gusti Patih Gajah Mada, desa kami telah diserang prajurit dari Kerajaan Sunda. Rumah-rumah terbakar, dan banyak dari kami yang terluka. Apa yang harus kami lakukan? #speaker:Villager #potrait:villager_sad #layout:right #audio:drawKnife1
+-> Ketiga
+=== Ketiga ===
+Tenanglah, rakyatku. Aku mendengar kabar ini. Bagaimana kondisi para penduduk sekarang? #speaker:GajahMada #potrait:gajahmada_neutral #layout:left #audio:drawKnife1
+-> Keempat
+=== Keempat ===
 ~ playEmote("exclamation")
-baiklah lanjutkan petualangan anda sebagai Gajah Mada! #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
--> END
-= TidakPaham
-ah Baiklah saya akan mengulanginya. #speaker:Villager #potrait:vilager_default #layout:right #audio:drawKnife1
-+ [Baiklah]
--> main
+Kami mencoba bertahan, Gusti. Banyak dari kami yang telah mengungsi ke desa terdekat. Anak-anak dan perempuan sudah kami amankan, namun banyak pria yang masih terluka #speaker:Villager #potrait:villager_sad #layout:right #audio:drawKnife1
+-> Kelima
+=== Kelima ===
+Ini adalah tindakan yang tidak bisa dibiarkan. Kerajaan Sunda telah melampaui batas. Aku akan segera mengirim bala bantuan untuk membantu kalian #speaker:GajahMada #potrait:gajahmada_unHappy #layout:left #audio:drawKnife1
+-> Keenam
+=== Keenam ===
+Terima kasih, Gusti. Kami sangat menghargai bantuan dan perhatianmu. Kami siap bekerja keras untuk membangun kembali desa kami #speaker:Villager #potrait:villager_happy #layout:right #audio:drawKnife1
+-> Ketujuh
+
+=== Ketujuh ===
+ Kembalilah ke desa kalian dan beritahukan pada yang lain bahwa bantuan akan segera datang. Dan ingatlah, Majapahit akan selalu melindungi rakyatnya. Kita akan bangkit lebih kuat dari sebelumnya #speaker:GajahMada #potrait:gajahmada_happy #layout:left #audio:drawKnife1 
+ -> DONE
+
+
+
 
 
 

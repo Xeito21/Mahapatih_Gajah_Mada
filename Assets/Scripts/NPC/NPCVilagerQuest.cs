@@ -32,7 +32,7 @@ public class NPCVilagerQuest : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInside && Input.GetKeyDown(KeyCode.Z))
+        if (isPlayerInside && Input.GetKeyDown(KeyCode.E))
         {
             QuestGiver.instance.InitializeQuest(npcQuestData.quest);
             QuestGiver.instance.OpenQuestWindow();

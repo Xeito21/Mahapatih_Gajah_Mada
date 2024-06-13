@@ -84,8 +84,8 @@ public class UI_SlotItem : MonoBehaviour , IPointerDownHandler, IPointerEnterHan
         else
             yOffset = 100;
         */
-        
 
+        CursorUI.Instance.SetCursorPoint();
         ui.itemToolTips.ShowToolTip(item.data as ItemData_Equipment);
         //ui.itemToolTips.transform.position = new Vector2(mousePosition.x + xOffset, mousePosition.y + yOffset);
     }
@@ -94,6 +94,7 @@ public class UI_SlotItem : MonoBehaviour , IPointerDownHandler, IPointerEnterHan
     {
         if(item == null)
             return;
+        CursorUI.Instance.SetCustomCursor();
         ui.itemToolTips.HideToolTip();
     }
 }

@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
                 StopCoroutine(displayLineCoroutine);
             }
             string nextLine = currentStory.Continue();
-            if(nextLine.Equals("") && !currentStory.canContinue)
+            if (nextLine.Equals("") && !currentStory.canContinue)
             {
                 StartCoroutine(ExitDialogueMode());
             }
@@ -167,19 +167,16 @@ public class DialogueManager : MonoBehaviour
 
         bool isAddingRichTextTag = false;
 
-
         foreach (char letter in line.ToCharArray())
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                dialogueText.maxVisibleCharacters = line.Length;
-                break;
+                yield return null; 
             }
 
             if (letter == '<' || isAddingRichTextTag)
             {
                 isAddingRichTextTag = true;
-                //dialogueText.text += letter;
                 if (letter == '>')
                 {
                     isAddingRichTextTag = false;
@@ -193,11 +190,12 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        continueIcon.SetActive(true);
-        DisplayChoices();
-
+        dialogueText.maxVisibleCharacters = line.Length;
         canContinueToNextLine = true;
+        continueIcon.SetActive(true);
     }
+
+
 
     private void PlayDialogueSound(int currentDisplayedCharacterCount, char currentCharacter)
     {

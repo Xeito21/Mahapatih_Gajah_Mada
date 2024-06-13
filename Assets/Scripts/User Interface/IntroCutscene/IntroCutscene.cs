@@ -15,18 +15,14 @@ public class IntroCutscene : MonoBehaviour
 
     void Start()
     {
-        // Get the CanvasGroup component attached to the button
         canvasGroup = button.GetComponent<CanvasGroup>();
 
         if (canvasGroup == null)
         {
-            // If there is no CanvasGroup component, add one
             canvasGroup = button.gameObject.AddComponent<CanvasGroup>();
         }
 
-        // Set the initial alpha to 0 (fully transparent)
         canvasGroup.alpha = 0f;
-        // Disable the button interaction initially
         button.interactable = false;
     }
 
@@ -35,12 +31,9 @@ public class IntroCutscene : MonoBehaviour
         // Increase the timer
         timer += Time.deltaTime;
 
-        // Check if the delay time has passed
         if (timer >= delay)
         {
-            // Set the alpha to 1 (fully visible)
             canvasGroup.alpha = 1f;
-            // Enable the button interaction
             button.interactable = true;
         }
     }

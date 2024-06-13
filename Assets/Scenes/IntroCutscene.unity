@@ -953,6 +953,7 @@ GameObject:
   - component: {fileID: 1606596461}
   - component: {fileID: 1606596460}
   - component: {fileID: 1606596466}
+  - component: {fileID: 1606596467}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1100,6 +1101,21 @@ MonoBehaviour:
   fadeScreen: {fileID: 730492413}
   button: {fileID: 354993513}
   delay: 30
+--- !u!114 &1606596467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606596458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97093e5628018646b9cdece587cfe32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 8bcbd1a6725f7094c8fc05982009d65f, type: 3}
+  cursorPoint: {fileID: 2800000, guid: ddbc1d373e234eb488a078af75ae4dea, type: 3}
+  targetCursor: {fileID: 2800000, guid: dbfb1f450ec5dfc4eb9234577ac21422, type: 3}
 --- !u!1 &1606615366
 GameObject:
   m_ObjectHideFlags: 0

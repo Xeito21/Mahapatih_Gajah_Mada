@@ -76,11 +76,13 @@ public class UI_SlotSkillTree : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        CursorUI.Instance.SetCursorPoint();
         ui.skillToolTip.ShowToolTip(descSkill, namaSkill, skillCost);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        CursorUI.Instance.SetCustomCursor();
         ui.skillToolTip.HideToolTip();
     }
 
