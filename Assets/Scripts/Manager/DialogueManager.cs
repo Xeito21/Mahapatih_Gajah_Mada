@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     private InkExternalFunctions inkExternalFunctions;
 
     [Header("Typing Speed")]
-    [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private float typingSpeed = 0.02f;
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine = false;
 
