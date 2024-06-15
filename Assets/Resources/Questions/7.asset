@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 7
   m_EditorClassIdentifier: 
-  _info: Apa yang melambangkan komitmen Gajah Mada dalam menyatukan wilayah Nusantara?
+  _info: Kerajaan Majapahit mencapai puncak kejayaannya di bawah kepemimpinan siapa?
   _answers:
-  - _info: Perjanjian Perdamaian
+  - _info: Gajah Mada
     _isCorect: 0
-  - _info: Sumpah Palapa
+  - _info: Hayam Wuruk
     _isCorect: 1
-  - _info: Piagam Kebijakan
+  - _info: Tribhuwana Tunggadewi
     _isCorect: 0
-  - _info: Sumpah Kesetiaan
+  - _info: Raden Wijaya
     _isCorect: 0
   _useTimer: 1
   _timer: 30

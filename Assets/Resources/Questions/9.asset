@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 9
   m_EditorClassIdentifier: 
-  _info: Apa yang menjadi visi Gajah Mada selain dari menyatukan wilayah kerajaannya?
+  _info: Apa yang menjadi pusat pemerintahan dan budaya Majapahit pada masa kejayaannya?
   _answers:
-  - _info: Membangun tembok besar untuk melindungi wilayahnya
+  - _info: Singasari
     _isCorect: 0
-  - _info: Menjalin hubungan dengan negara-negara Asia lainnya
+  - _info: Kediri
+    _isCorect: 0
+  - _info: Trowulan
     _isCorect: 1
-  - _info: Mengembangkan perdagangan dengan benua Eropa
-    _isCorect: 0
-  - _info: Mengekspansi wilayah ke arah timur
+  - _info: Majapahit
     _isCorect: 0
   _useTimer: 1
   _timer: 30

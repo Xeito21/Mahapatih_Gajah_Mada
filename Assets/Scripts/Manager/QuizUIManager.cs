@@ -52,7 +52,7 @@ public struct UIElements
     [SerializeField] RectTransform finishUIElements;
     public RectTransform FinishUIElements { get { return finishUIElements; } }
 }
-public class QuizUIManager : MonoBehaviour
+public class QuizUIManager : MonoBehaviour, ISaveManager
 {
     public enum ResolutionScreenType { Correct, Incorrect, Finish }
 
@@ -63,6 +63,8 @@ public class QuizUIManager : MonoBehaviour
     [SerializeField] AnswerData answerPrefab = null;
     [SerializeField] UIElements uiElements = new UIElements();
 
+    [Header("Panel")]
+    [SerializeField] private GameObject resolutionWindow;
 
     [Space]
     [SerializeField] QuizUIManagerParamters parameters = new QuizUIManagerParamters();
@@ -133,10 +135,11 @@ public class QuizUIManager : MonoBehaviour
                 break;
             case ResolutionScreenType.Finish:
                 QuizManager.instance.isFinish = true;
+                uiElements.FinishUIElements.gameObject.SetActive(true);
+                resolutionWindow.gameObject.SetActive(false);
                 uiElements.ResolutionBG.color = parameters.FinalBGColor;
                 uiElements.ResolutionStateInfoText.gameObject.SetActive(false);
                 uiElements.ResolutionScoreText.gameObject.SetActive(false);
-                uiElements.FinishUIElements.gameObject.SetActive(true);
                 break;
         }
     }
@@ -191,5 +194,17 @@ public class QuizUIManager : MonoBehaviour
     private void UpdateScoreUI()
     {
         uiElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+    }
+
+    public int GetScoreFinal() => events.CurrentFinalScore;
+
+    public void LoadData(GameData _data)
+    {
+        this.events.CurrentFinalScore = _data.finalScore;
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.finalScore = this.events.CurrentFinalScore;
     }
 }

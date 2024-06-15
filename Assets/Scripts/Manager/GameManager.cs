@@ -46,9 +46,15 @@ public class GameManager : MonoBehaviour,ISaveManager
         SceneManager.LoadScene(previousSceneName);
     }
 
+    public void LevelCompleted()
+    {
+        SaveManager.instance.SaveGame();
+        string previousSceneName = "MainMenu";
+        SceneManager.LoadScene(previousSceneName);
+    }
+
     public void LoadData(GameData _data)
     {
-        
         StartCoroutine(LoadWithDelay(_data));
     }
 

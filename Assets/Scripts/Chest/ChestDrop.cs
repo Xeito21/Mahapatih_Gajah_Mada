@@ -2,8 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class ChestDrop : MonoBehaviour
+public class ChestDrop : MonoBehaviour, ISaveManager
 {
+    [SerializeField] private int chestID;
     [SerializeField] private int gobogDrop;
     [SerializeField] private TextMeshProUGUI interactPrompt;
     [SerializeField] private GameObject inputPrompt;
@@ -13,7 +14,7 @@ public class ChestDrop : MonoBehaviour
     [SerializeField] private AnimationCurve fadeCurve;
     private Animator chestAnimator;
     private ItemDrop myDropSystem;
-    private bool isOpen = false;
+    public bool isOpen = false;
     private bool playerInRange = false;
     private bool isEnemyNearby = false;
 
@@ -59,6 +60,7 @@ public class ChestDrop : MonoBehaviour
             return;
         OpenChest();
         User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText("Harta Karun Terbuka!"));
+        SaveManager.instance.SaveGame();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -104,7 +106,6 @@ public class ChestDrop : MonoBehaviour
         renderer.material.color = transparentColor;
 
         Destroy(gameObject);
-        isOpen = false;
     }
     private bool IsEnemyNearby()
     {
@@ -126,5 +127,26 @@ public class ChestDrop : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, enemyCheckRadius);
     }
 
+    public void LoadData(GameData _data)
+    {
+        if (_data.chest.TryGetValue(chestID, out bool value))
+        {
+            isOpen = value;
+            if (isOpen)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
+    public void SaveData(ref GameData _data)
+    {
+        if (_data.chest.TryGetValue(chestID, out bool value))
+        {
+            _data.chest.Remove(chestID);
+            _data.chest.Add(chestID, isOpen);
+        }
+        else
+            _data.chest.Add(chestID, isOpen);
+    }
 }

@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
 
-public class RelikChest : MonoBehaviour
+public class RelikChest : MonoBehaviour, ISaveManager
 {
     [System.Serializable]
     public class DropItem
@@ -13,27 +12,35 @@ public class RelikChest : MonoBehaviour
         public float dropChanceRelik;
     }
 
+    [SerializeField] private int ChestRelikID;
     [SerializeField] private TextMeshProUGUI interactPrompt;
     [SerializeField] private GameObject inputPrompt;
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private AnimationCurve fadeCurve;
     [SerializeField] private float enemyCheckRadius = 5f;
-    [SerializeField] private LayerMask enemyLayerMask; 
+    [SerializeField] private LayerMask enemyLayerMask;
     [SerializeField] private int gobogDrop;
     public List<DropItem> dropRelik = new List<DropItem>();
     private bool isPlayerInRange = false;
     private bool isEnemyNearby = false;
-    private bool isOpened = false;
+    private bool isOpen = false;
     private Animator chestAnimator;
 
     private void Start()
     {
-        if (interactPrompt != null)
-        {
-            interactPrompt.gameObject.SetActive(false);
-        }
-
         chestAnimator = GetComponentInChildren<Animator>();
+
+        if (isOpen)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            if (interactPrompt != null)
+            {
+                interactPrompt.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void Update()
@@ -48,12 +55,16 @@ public class RelikChest : MonoBehaviour
             else
             {
                 TryInteract();
+                SaveManager.instance.SaveGame();
             }
         }
     }
 
     private void TryInteract()
     {
+        if (isOpen)
+            return;
+
         List<GameObject> selectedItems = ChooseItemsToDrop();
 
         foreach (GameObject item in selectedItems)
@@ -61,12 +72,15 @@ public class RelikChest : MonoBehaviour
             Interact(item);
         }
 
-        isOpened = true;
+        isOpen = true;
+
+
+        
     }
 
     private void Interact(GameObject item)
     {
-        if (isOpened) // Memastikan item tidak diinstansiasi lagi jika sudah diambil
+        if (isOpen)
             return;
 
         if (item != null)
@@ -115,33 +129,26 @@ public class RelikChest : MonoBehaviour
         float timer = 0f;
         Renderer renderer = GetComponentInChildren<Renderer>();
 
-        // Mendapatkan opacity awal
         Color initialColor = renderer.material.color;
 
         while (timer < fadeDuration)
         {
-            // Menghitung progress fading
             float progress = timer / fadeDuration;
 
-            // Menerapkan fading menggunakan kurva yang dipilih
             float opacity = fadeCurve.Evaluate(progress);
             Color fadeColor = new Color(initialColor.r, initialColor.g, initialColor.b, opacity);
             renderer.material.color = fadeColor;
 
-            // Menunggu frame selanjutnya
             yield return null;
 
-            // Mengupdate timer
             timer += Time.deltaTime;
         }
 
-        // Set opacity ke 0 (transparan)
         Color transparentColor = new Color(initialColor.r, initialColor.g, initialColor.b, 0f);
         renderer.material.color = transparentColor;
 
-        // Hapus chest setelah fading selesai
         Destroy(gameObject);
-        isOpened = false;
+        isOpen = true;
     }
 
     private bool IsEnemyNearby()
@@ -182,5 +189,28 @@ public class RelikChest : MonoBehaviour
         // Menggambar gizmo berbentuk lingkaran untuk deteksi musuh
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, enemyCheckRadius);
+    }
+
+    public void LoadData(GameData _data)
+    {
+        if (_data.chestRelik.TryGetValue(ChestRelikID, out bool value))
+        {
+            isOpen = value;
+            if (isOpen)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        if (_data.chestRelik.TryGetValue(ChestRelikID, out bool value))
+        {
+            _data.chestRelik.Remove(ChestRelikID);
+            _data.chestRelik.Add(ChestRelikID, isOpen);
+        }
+        else
+            _data.chestRelik.Add(ChestRelikID, isOpen);
     }
 }

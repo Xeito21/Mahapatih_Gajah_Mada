@@ -6,15 +6,17 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyStats))]
 [RequireComponent(typeof(EntityFX))]
 [RequireComponent(typeof(ItemDrop))]
-public class Enemy : Entity
+public class Enemy : Entity, ISaveManager
 {
     [SerializeField] protected LayerMask whatIsPlayer;
-
     [Header("Stun Info")]
     public float stunDuration = 1;
     public Vector2 stunDirection = new Vector2(8,8);
     protected bool canBeStunned;
     [SerializeField] protected GameObject counterImage;
+
+    public int soldierID;
+    public bool prajurtisDead = false;
 
     [Header("Move Info")]
     public float moveSpeed = 1.8f;
@@ -32,6 +34,7 @@ public class Enemy : Entity
     public EnemyStateMachine stateMachine { get; private set; }
     public EntityFX fx { get; private set; }
     public string lastAnimBoolName {get; private set;}
+
 
 
     protected override void Awake()
@@ -145,5 +148,28 @@ public class Enemy : Entity
         base.OnDrawGizmos();
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDir, transform.position.y));
+    }
+
+    public void LoadData(GameData _data)
+    {
+        if (_data.prajurit.TryGetValue(soldierID, out bool value))
+        {
+            prajurtisDead = value;
+            if (prajurtisDead)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        if (_data.prajurit.TryGetValue(soldierID, out bool value))
+        {
+            _data.prajurit.Remove(soldierID);
+            _data.prajurit.Add(soldierID, prajurtisDead);
+        }
+        else
+            _data.prajurit.Add(soldierID, prajurtisDead);
     }
 }

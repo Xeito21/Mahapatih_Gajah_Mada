@@ -21,7 +21,7 @@ public class UI_FinishStage : MonoBehaviour
 
     private void SummaryStars()
     {
-        if (finalScore > 3500)
+        if (finalScore > 2500)
         {
             DisplayStars(3, Color.white);
         }

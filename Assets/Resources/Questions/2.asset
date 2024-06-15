@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  _info: Bagaimana peran Gajah Mada dalam menyatukan wilayah Nusantara dan menghubungkan
-    dengan negara-negara Asia lainnya?
+  _info: Di mana ibu kota pertama Kerajaan Majapahit terletak?
   _answers:
-  - _info: Melalui perang agresif
+  - _info: Yogyakarta
     _isCorect: 0
-  - _info: Dengan diplomasi dan perjanjian
+  - _info: Trowulan
     _isCorect: 1
-  - _info: Dengan serangan militer
+  - _info: Surabaya
     _isCorect: 0
-  - _info: Tanpa campur tangan luar
+  - _info: Bali
     _isCorect: 0
   _useTimer: 1
   _timer: 30

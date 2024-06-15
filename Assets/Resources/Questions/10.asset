@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 10
   m_EditorClassIdentifier: 
-  _info: Apa tujuan dari tindakan dan upaya diplomatis Gajah Mada?
+  _info: Sebutkan peninggalan benda sejarah pada masa pemerintahan Gajah Mada! (tiga
+    benda sejarah)
   _answers:
-  - _info: Menyebarkan agama baru di wilayahnya
-    _isCorect: 0
-  - _info: Memperkuat hegemoni kerajaannya
-    _isCorect: 0
-  - _info: Membentuk aliansi kuat dan mempromosikan pertukaran ekonomi dan budaya
+  - _info: Pedang Keris
     _isCorect: 1
-  - _info: Membangun tembok pertahanan untuk menghalangi invasi musuh
+  - _info: Pedang Bajrasakti
     _isCorect: 0
+  - _info: Negarakertagama
+    _isCorect: 1
+  - _info: Prasasti Kawali
+    _isCorect: 1
   _useTimer: 1
   _timer: 30
-  _answerType: 1
-  _addScore: 800
+  _answerType: 0
+  _addScore: 1000

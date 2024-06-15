@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_Soldier : Enemy
 {
-    #region States
+      #region States
     public SoldierIdleState idleState { get; private set; }
     public SoldierMoveState moveState { get; private set; }
     public SoldierBattleState battleState { get; private set; }
@@ -50,5 +50,8 @@ public class Enemy_Soldier : Enemy
     {
         base.Die();
         stateMachine.ChangeState(deadState);
+        
     }
+
+
 }

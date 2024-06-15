@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
-  _info: Bagaimana gambaran keseluruhan Gajah Mada dalam konteks kebangkitan dan
-    kemakmuran wilayah Nusantara?
+  _info: Apa nama sumpah terkenal yang diucapkan oleh Gajah Mada?
   _answers:
-  - _info: Sebagai tokoh yang tidak berpengaruh
+  - _info: Sumpah Merdeka
     _isCorect: 0
-  - _info: Sebagai pahlawan yang mendedikasikan hidupnya untuk kesatuan dan kemakmuran
+  - _info: Sumpah Palapa
     _isCorect: 1
-  - _info: Sebagai penguasa yang otoriter
+  - _info: Sumpah Nusantara
     _isCorect: 0
-  - _info: Sebagai pengkhianat yang mengejar kekuasaan pribadi
+  - _info: Sumpah Setia
     _isCorect: 0
   _useTimer: 1
   _timer: 30

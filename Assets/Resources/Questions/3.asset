@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  _info: Apa yang menjadi kontribusi utama Gajah Mada dalam memperluas pengaruh dan
-    kemakmuran Kerajaan Majapahit?
+  _info: Apa yang menjadi salah satu kunci sukses Raden Wijaya dalam mendirikan Majapahit?
   _answers:
-  - _info: Penaklukan wilayah baru
+  - _info: Kekuatan militer yang besar
     _isCorect: 0
-  - _info: Pertempuran dan kekuatan militer
+  - _info: Hubungan baik dengan tentara Mongol
     _isCorect: 0
-  - _info: Pembangunan infrastruktur
+  - _info: Penggunaan teknologi canggih
     _isCorect: 0
-  - _info: Diplomasi dan perdagangan
+  - _info: Kemampuan membentuk aliansi
     _isCorect: 1
   _useTimer: 1
   _timer: 30

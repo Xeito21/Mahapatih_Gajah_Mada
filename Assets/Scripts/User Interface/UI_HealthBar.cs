@@ -1,41 +1,63 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_HealthBar : MonoBehaviour
 {
-    private Entity entity;
     private CharacterStats myStats;
     private RectTransform myTransform;
     private Slider slider;
-    
-    
-    private void Start()
+
+    protected virtual void Start()
     {
         myTransform = GetComponent<RectTransform>();
-        entity = GetComponentInParent<Entity>();
         slider = GetComponentInChildren<Slider>();
         myStats = GetComponentInParent<CharacterStats>();
-
-        myStats.onHealthChanged += UpdateHealthUI;
-        entity.onFlipped += FlipUI;
-
         UpdateHealthUI();
-    }
+        myStats.onHealthChanged += UpdateHealthUI;
+        if (myTransform == null)
+        {
+            Debug.LogError("RectTransform is not found!");
+            return;
+        }
 
+        if (slider == null)
+        {
+            Debug.LogError("Slider is not found in children!");
+            return;
+        }
+
+        if (myStats == null)
+        {
+            Debug.LogError("CharacterStats component is not found in parent!");
+            return;
+        }
+        
+        slider.value = myStats.GetMaxHealthValue();
+    }
 
     private void UpdateHealthUI()
     {
-        slider.maxValue = myStats.GetMaxHealthValue();
-        slider.value = myStats.currentHealth;
+        if (myStats != null && slider != null)
+        {
+            slider.maxValue = myStats.GetMaxHealthValue();
+            slider.value = myStats.currentHealth;
+        }
     }
 
-    private void FlipUI() => myTransform.Rotate(0, 180, 0);
+    private void FlipUI()
+    {
+        if (myTransform != null)
+        {
+            myTransform.Rotate(0, 180, 0);
+        }
+    }
+
     private void OnDisable()
     {
-        entity.onFlipped -= FlipUI;
-        myStats.onHealthChanged -= UpdateHealthUI;
+        if (myStats != null)
+        {
+            FlipUI();
+            myStats.onHealthChanged -= UpdateHealthUI;
+        }
     }
-    
 }

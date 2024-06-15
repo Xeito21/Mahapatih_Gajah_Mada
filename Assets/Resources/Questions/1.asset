@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  _info: Apa yang menjadi simbol dari dedikasi Gajah Mada dalam melayani bangsa dan
-    menjaga sumpah suci?
+  _info: Siapakah yang mendirikan Kerajaan Majapahit pada tahun 1293?
   _answers:
-  - _info: Sumpah Kekuasaan
+  - _info: Tribhuwana Tunggadewi
     _isCorect: 0
-  - _info: Sumpah Kesetiaan
+  - _info: Hayam Wuruk
     _isCorect: 0
-  - _info: Sumpah Palapa
+  - _info: Gajah Mada
+    _isCorect: 0
+  - _info: Raden Wijaya
     _isCorect: 1
-  - _info: Sumpah Pemersatu
-    _isCorect: 0
   _useTimer: 1
   _timer: 30
   _answerType: 1

@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1311a6065269485419e6d337fadae6aa, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
-  _info: Mengapa posisi Gajah Mada sebagai pranala kedatuan dihormati dan mengapa
-    hal ini penting dalam politik Majapahit?
+  _info: Siapa yang menjadi pemimpin Majapahit setelah Raden Wijaya?
   _answers:
-  - _info: Karena dia memiliki kekayaan yang besar
+  - _info: Tribhuwana Tunggadewi
     _isCorect: 0
-  - _info: Karena dia adalah keturunan langsung raja
+  - _info: Gajah Mada
     _isCorect: 0
-  - _info: Karena dia adalah penasihat utama raja
+  - _info: Hayam Wuruk
     _isCorect: 0
-  - _info: Karena dia menjadi penghubung antara orang-orang dan pejabat Majapahit
+  - _info: Jayanegara
     _isCorect: 1
   _useTimer: 1
   _timer: 30

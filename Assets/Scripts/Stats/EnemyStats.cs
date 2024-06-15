@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyStats : CharacterStats
@@ -9,6 +6,7 @@ public class EnemyStats : CharacterStats
     private Enemy enemy;
     private ItemDrop myDropSystem;
     public BaseStats gobogDropAmount;
+
 
     [Header("Difficult details")]
     [SerializeField] private int level = 1;
@@ -66,10 +64,12 @@ public class EnemyStats : CharacterStats
 
         base.Die();
         enemy.Die();
+        enemy.prajurtisDead = true;
         QuestIsActive();
         PlayerManager.instance.currency += gobogDropAmount.GetValue();
         myDropSystem.GenerateDrop();
         Destroy(gameObject, 3f);
+        SaveManager.instance.SaveGame();
     }
 
     private void QuestIsActive()
@@ -77,4 +77,6 @@ public class EnemyStats : CharacterStats
         if (quest.goal.goalType == GoalType.Kill)
             PlayerManager.instance.QuestOnProgress();
     }
+
+
 }
