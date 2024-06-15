@@ -88,7 +88,7 @@ public class GajahMada : Entity
         CheckForDashInput();
 
         if(Input.GetKeyDown(KeyCode.F) && skill.crystal.crystalUnlocked)
-        skill.crystal.CanUseSkillI();
+            skill.crystal.CanUseSkillI();
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
             Bagspace.instance.MenggunakanRamuan();
@@ -144,7 +144,7 @@ public class GajahMada : Entity
         if(skill.dash.dashUnlocked == false)
             return;
 
-        if (Input.GetKeyDown(KeyCode.L) && SkillManager.instance.dash.CanUseSkillI())
+        if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.instance.dash.CanUseSkillI())
         {
             dashDir = Input.GetAxisRaw("Horizontal");
             if (dashDir == 0)

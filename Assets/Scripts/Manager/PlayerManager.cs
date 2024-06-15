@@ -38,6 +38,7 @@ public class PlayerManager : MonoBehaviour, ISaveManager
 
                 if (quest.goal.isReached())
                 {
+                    User_Interfaces.instance.StartCoroutine(User_Interfaces.instance.DisplayPopupText(quest.title + " Telah Selesai"));
                     QuestComplete();
                 }
             }

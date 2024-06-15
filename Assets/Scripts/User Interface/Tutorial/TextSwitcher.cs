@@ -76,7 +76,7 @@ public class TextSwitcher : MonoBehaviour
         else
         {
             PopupWindow.gameObject.SetActive(false);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
 

@@ -9,7 +9,7 @@ public class RelikTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Panggil metode UpdateInfo dari GameController dengan indeks item yang sesuai
+            AudioManager.instance.PlaySFX(2, null);
             relikController.ShowUI(true);
             relikController.UpdateInfo(itemIndex);
             Destroy(transform.parent.gameObject);

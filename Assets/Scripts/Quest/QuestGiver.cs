@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
 public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
-
     public PlayerManager playerManager;
     public GameObject questWindow;
 
@@ -29,41 +27,53 @@ public class QuestGiver : MonoBehaviour
 
     public static QuestGiver instance;
 
-
     private void Awake()
     {
         instance = this;
     }
 
-    /* private void Update()
-    {
-        quest.goal.UpdateUIQuest();
-    }
-    */
-
     public void OpenQuestWindow()
     {
-
-        Debug.Log("OpenQuestWindow called");
         questWindow.SetActive(true);
         titleText.text = quest.title;
 
         if (quest.goal.goalType == GoalType.Kill)
         {
             descriptionText.text = quest.description;
-            if (quest.isActive == true)
+            if (quest.isActive)
+            {
                 TextAmount.text = "Mengalahkan Prajurit " + quest.goal.currentAmount + "/" + quest.goal.requiredAmount;
+            }
         }
         else if (quest.goal.goalType == GoalType.Gathering)
         {
             descriptionText.text = quest.description;
-            if (quest.isActive == true)
+            if (quest.isActive)
                 TextAmount.text = "Gathered: " + quest.goal.currentAmount + "/" + quest.goal.requiredAmount;
         }
 
-
         gobogText.text = "Reward: " + quest.gobogReward.ToString();
         keysText.text = "Reward: " + quest.keysReward.ToString();
+
+        Debug.Log($"Quest isCompleted: {quest.isCompleted}");
+        Debug.Log($"Quest isActive: {quest.isActive}");
+
+        // Check if the quest is completed and hide the accept button if true
+        if (quest.isCompleted)
+        {
+            acceptBtn.SetActive(false);
+            TextAmount.text = "Quest sudah kamu selesaikan";
+            questOnProgressText.text = "<color=green>Quest Completed!</color>";
+        }
+        else if (quest.isActive)
+        {
+            acceptBtn.SetActive(false);
+            questOnProgressText.text = "<color=green>Sedang Dikerjakan!</color>";
+        }
+        else
+        {
+            acceptBtn.SetActive(true);
+        }
     }
 
     public void DisplayPopUpText(string title, string amount)
@@ -88,10 +98,11 @@ public class QuestGiver : MonoBehaviour
 
         popUpText.gameObject.SetActive(false);
     }
+
     private IEnumerator DisplayTextForDuration()
     {
         textQuestDiambil.gameObject.SetActive(true);
-        textQuestDiambil.text = quest.title + "Telah diambil!";
+        textQuestDiambil.text = quest.title + " Telah diambil!";
 
         yield return new WaitForSeconds(popUpTextDuration);
 
@@ -106,11 +117,11 @@ public class QuestGiver : MonoBehaviour
         textQuestDiambil.gameObject.SetActive(false);
     }
 
-
     public void AcceptQuest()
     {
         if (!quest.isActive && !quest.isCompleted)
         {
+            AudioManager.instance.PlaySFX(39, null);
             StartCoroutine(DisplayTextForDuration());
             questWindow.SetActive(false);
             quest.isActive = true;
@@ -120,18 +131,14 @@ public class QuestGiver : MonoBehaviour
             {
                 gatheringItemPrefab.SetActive(true);
             }
-            else if (quest.isCompleted == true)
-            {
-                Destroy(gatheringItemPrefab);
-            }
         }
         else
         {
             acceptBtn.SetActive(false);
             questOnProgressText.text = "<color=green>Sedang Dikerjakan!</color>";
-            Debug.Log("Quest already completed or currently active.");
         }
     }
+
     public void InitializeQuest(Quest quest)
     {
         this.quest = quest;
@@ -141,7 +148,4 @@ public class QuestGiver : MonoBehaviour
     {
         questWindow.SetActive(false);
     }
-
-
-
 }

@@ -23,8 +23,8 @@ public class Quest
         isActive = false;
         isCompleted = true;
         goal.currentAmount = 0; // reset currentAmount
-        Debug.Log(title + " was Complete");
         goal.UpdateUIQuest();
+        SaveManager.instance.SaveGame();
     }
 
 }

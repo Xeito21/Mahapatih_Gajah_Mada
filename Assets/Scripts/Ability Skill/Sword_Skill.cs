@@ -86,14 +86,13 @@ public class Sword_Skill : Skill
 
     protected override void Update()
     {
-        if (Input.GetKeyUp(KeyCode.O))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
-            CursorUI.Instance.SetCustomCursor();
-            
             finalDir = new Vector2(AimDirection().normalized.x * launchForce.x, AimDirection().normalized.y * launchForce.y);
+            CursorUI.Instance.SetCustomCursor();
         }
 
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKey(KeyCode.Q))
         {
             CursorUI.Instance.SetTargetCursor();
             for (int i = 0; i < dots.Length; i++)

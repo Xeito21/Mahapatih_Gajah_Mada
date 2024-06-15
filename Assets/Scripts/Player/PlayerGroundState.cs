@@ -38,13 +38,13 @@ public class PlayerGroundState : PlayerState
         }
 
             
-        if (Input.GetKeyDown(KeyCode.O) && TidakMemegangPedang() && player.skill.sword.swordUnlocked)
+        if (Input.GetKeyDown(KeyCode.Q) && TidakMemegangPedang() && player.skill.sword.swordUnlocked)
             stateMachine.ChangeState(player.aimSwordState);
 
-        if (Input.GetKeyDown(KeyCode.I) && player.skill.parry.resoluteParryUnlocked)
+        if (Input.GetMouseButtonDown(1) && player.skill.parry.resoluteParryUnlocked)
             stateMachine.ChangeState(player.counterAttackState);
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetMouseButtonDown(0))
         {
             stateMachine.ChangeState(player.primaryAttackState);
         }

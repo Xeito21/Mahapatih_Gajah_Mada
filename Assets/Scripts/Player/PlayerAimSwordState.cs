@@ -26,7 +26,7 @@ public class PlayerAimSwordState : PlayerState
 
         player.SetZeroVelocity();
 
-        if (Input.GetKeyUp(KeyCode.O))
+        if (Input.GetKeyUp(KeyCode.Q))
             stateMachine.ChangeState(player.idleState);
 
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
