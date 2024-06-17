@@ -3,34 +3,34 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 
-public class RelikController : MonoBehaviour
+public class RelikController : MonoBehaviour, ISaveManager
 {
     [System.Serializable]
     public class InfoItem
     {
+        public int relikID;
         public Sprite image;
         public string title;
         [TextArea]
         public string description;
+        public bool hasItem = false;
     }
 
     public List<InfoItem> infoItems = new List<InfoItem>();
 
-    [SerializeField] private GameObject uiPanel; // Panel UI yang akan diaktifkan/dinonaktifkan
+    [SerializeField] private GameObject uiPanel;
     [SerializeField] private Image displayImage;
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
 
     private void Start()
     {
-        // Pastikan UI dimulai dalam keadaan tidak aktif
         uiPanel.SetActive(false);
-
-        // Tampilkan item pertama jika diperlukan
         if (infoItems.Count > 0)
         {
             DisplayInfo(infoItems[0]);
         }
+        CheckItemStatus();  // Periksa status item pada saat mulai
     }
 
     public void DisplayInfo(InfoItem item)
@@ -49,6 +49,9 @@ public class RelikController : MonoBehaviour
         {
             DisplayInfo(infoItems[itemIndex]);
             ShowUI(true);
+            infoItems[itemIndex].hasItem = true;  // Misalnya, menandai item sebagai diambil
+            CheckItemStatus();  // Periksa status item setelah memperbarui
+
         }
     }
 
@@ -57,6 +60,46 @@ public class RelikController : MonoBehaviour
         if (uiPanel != null)
         {
             uiPanel.SetActive(show);
+        }
+    }
+
+    public void LoadData(GameData _data)
+    {
+        foreach (var item in infoItems)
+        {
+            if (_data.relikOwnership.TryGetValue(item.title, out bool value))
+            {
+                item.hasItem = value;
+            }
+        }
+        CheckItemStatus();  // Periksa status item setelah memuat data
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        foreach (var item in infoItems)
+        {
+            if (_data.relikOwnership.ContainsKey(item.title))
+            {
+                _data.relikOwnership[item.title] = item.hasItem;
+            }
+            else
+            {
+                _data.relikOwnership.Add(item.title, item.hasItem);
+            }
+        }
+    }
+
+    private void CheckItemStatus()
+    {
+        foreach (var item in infoItems)
+        {
+            if (item.hasItem)
+            {
+                // Tindakan yang ingin dilakukan saat item dimiliki
+                Debug.Log($"Item {item.title} telah dimiliki.");
+                
+            }
         }
     }
 }

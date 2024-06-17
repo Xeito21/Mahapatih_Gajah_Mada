@@ -3,7 +3,7 @@ using UnityEngine;
 public class RelikTrigger : MonoBehaviour
 {
     public RelikController relikController;
-    public int itemIndex; // Index untuk item yang ingin ditampilkan
+    public int itemIndex;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +12,7 @@ public class RelikTrigger : MonoBehaviour
             AudioManager.instance.PlaySFX(2, null);
             relikController.ShowUI(true);
             relikController.UpdateInfo(itemIndex);
+            SaveManager.instance.SaveGame();
             Destroy(transform.parent.gameObject);
         }
     }

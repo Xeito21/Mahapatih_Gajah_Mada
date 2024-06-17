@@ -51,8 +51,8 @@ public class FileDataHandler
     public GameData Load()
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);
+        Debug.Log("Trying to load file from: " + fullPath);
         GameData loadData = null;
-
         if (File.Exists(fullPath))
         {
             try
@@ -68,7 +68,9 @@ public class FileDataHandler
                 }
 
                 if (encryptData)
+                {
                     dataToLoad = EncryptDecrypt(dataToLoad);
+                }
 
                 loadData = JsonUtility.FromJson<GameData>(dataToLoad);
             }
@@ -77,8 +79,6 @@ public class FileDataHandler
                 Debug.LogError("Error on trying to load data from file:" + fullPath + "\n" + e);
             }
         }
-
-
 
 
         return loadData;

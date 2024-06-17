@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour,ISaveManager
 {
     public static GameManager instance;
+    private RelikController relikController;
 
     private Transform player;
     [SerializeField] private Checkpoint[] checkpoints;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour,ISaveManager
     }
     private void Start()
     {
+        relikController = FindObjectOfType<RelikController>();
         checkpoints = FindObjectsOfType<Checkpoint>();
         player = PlayerManager.instance.player.transform;
     }
@@ -125,6 +127,7 @@ public class GameManager : MonoBehaviour,ISaveManager
             _data.checkpoints.Add(checkpoint.checkpointId, checkpoint.checkPointStatus);
         }
     }
+
 
     private Checkpoint FindClosestCheckpoint()
     {
