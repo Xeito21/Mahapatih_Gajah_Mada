@@ -8941,6 +8941,9 @@ Transform:
   - {fileID: 1671761369}
   - {fileID: 4289095045712784122}
   - {fileID: 1526181290}
+  - {fileID: 834658022}
+  - {fileID: 2056030904}
+  - {fileID: 1286110718}
   - {fileID: 8402830231723930228}
   - {fileID: 1672811748}
   - {fileID: 195257885}
@@ -21771,6 +21774,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834405763}
   m_CullTransparentMesh: 1
+--- !u!1001 &834658021
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 338217628}
+    m_Modifications:
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 84.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.84908515
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457540094904652531, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_Name
+      value: Chest Relik - Gobog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: ChestRelikID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 1315773052}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].item
+      value: 
+      objectReference: {fileID: 1632027787}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].dropChanceRelik
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+--- !u!4 &834658022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+  m_PrefabInstance: {fileID: 834658021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836677456
 GameObject:
   m_ObjectHideFlags: 0
@@ -39544,6 +39629,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3988800afdd312191ac265daf47283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1286110717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 338217628}
+    m_Modifications:
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.84908515
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457540094904652531, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_Name
+      value: Chest Relik - Prasasti Canggal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: ChestRelikID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: fadeDuration
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 1315773052}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].item
+      value: 
+      objectReference: {fileID: 1632027787}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].dropChanceRelik
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+--- !u!4 &1286110718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+  m_PrefabInstance: {fileID: 1286110717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291876490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57494,6 +57665,88 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1001 &2056030903
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 338217628}
+    m_Modifications:
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 252.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.84908515
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457540094904652531, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: m_Name
+      value: Chest Relik - Kitab Sutasoma
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: ChestRelikID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 1315773052}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].item
+      value: 
+      objectReference: {fileID: 1632027787}
+    - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+      propertyPath: dropRelik.Array.data[0].dropChanceRelik
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+--- !u!4 &2056030904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2275563599289843586, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
+  m_PrefabInstance: {fileID: 2056030903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058905510
 GameObject:
   m_ObjectHideFlags: 0
@@ -57969,7 +58222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 152081884399733890, guid: 22e862119bc41003da76a91ead2347f1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6964254004824775386, guid: 22e862119bc41003da76a91ead2347f1, type: 3}
       propertyPath: m_Pivot.x
@@ -59774,71 +60027,6 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1796131181}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[3].image
-      value: 
-      objectReference: {fileID: 21300000, guid: ac51e89a7b6766e4bb2aea6e727733aa, type: 3}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[3].title
-      value: Gobog
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[4].image
-      value: 
-      objectReference: {fileID: 21300000, guid: ed942ff78fe8a4841bd1cf012bc63e27, type: 3}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[4].title
-      value: Prasasti Canggal
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[5].image
-      value: 
-      objectReference: {fileID: 21300000, guid: 146a1883e7c6c3c449feb45748d1f66e, type: 3}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[5].title
-      value: Kitab Sutasoma
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[3].description
-      value: Mata uang Gobog adalah uang logam dari Kerajaan Majapahit, terbuat dari
-        tembaga dengan bentuk bulat dan lubang segi empat di tengahnya. Ukurannya
-        bervariasi dan diduga berasal dari China abad ke-11 hingga ke-14 M. Nilainya
-        lebih rendah dari dinar dan dirham. Digunakan sebagai alat tukar sehari-hari,
-        kini langka dan mahal bagi kolektor. Selain pembayaran, juga penting dalam
-        upacara budaya dan agama serta dianggap memiliki kekuatan magis.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[4].description
-      value: Prasasti Canggal adalah sumber informasi berharga tentang Kerajaan Mataram
-        Kuno. Ditemukan di Gunung Wukir, Dusun Canggal, Magelang, Jawa Tengah pada
-        tahun 1775, prasasti ini ditulis dalam bahasa Sanskerta dan aksara Pallawa.
-        Isinya mencatat berdirinya Kerajaan Mataram Kuno oleh Sanjaya pada tahun
-        732 M, pembangunan Candi Canggal, serta silsilah raja-raja Mataram Kuno hingga
-        Rakai Pikatan. Prasasti ini juga memberikan gambaran kehidupan masyarakat
-        Mataram Kuno yang sejahtera dan damai. Disimpan di Museum Nasional Jakarta,
-        Prasasti Canggal menjadi salah satu koleksi benda bersejarah terpenting di
-        Indonesia.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: infoItems.Array.data[5].description
-      value: Kitab Sutasoma, karya Mpu Tantular pada abad ke-14, adalah karya sastra
-        berharga dari Kerajaan Majapahit yang menggabungkan cerita spiritual Pangeran
-        Sutasoma dengan ajaran filosofi, spiritualitas, dan nilai-nilai kehidupan.
-        Sutasoma, sosok bijaksana yang mencari ilmu, bertemu dengan tokoh spiritual
-        seperti Widyadhara, Bhagawan Narada, dan Dewi Tara untuk mendalami ajaran
-        Buddha. Nilai-nilai seperti Bhinneka Tunggal Ika, Moksa, Karma, Welas Asih,
-        dan keadilan yang terdapat dalam kitab ini masih relevan dalam budaya dan
-        spiritualitas Indonesia, menjadi sumber inspirasi bagi banyak seniman, budayawan,
-        dan cendekiawan.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623955552952213946, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
-      propertyPath: m_Name
-      value: Relik - Prasasti Kawali
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61738,7 +61926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8413593195378545631, guid: b3a2ee703dd4b0245a885218a9eca007, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769113331324391555, guid: b3a2ee703dd4b0245a885218a9eca007, type: 3}
       propertyPath: m_IsActive

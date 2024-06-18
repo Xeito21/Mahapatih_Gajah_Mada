@@ -16,6 +16,7 @@ public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
     private string chestText;
     private string progressText;
     private float targetProgress;
+    private int finalScore;
 
     void Start()
     {
@@ -39,11 +40,11 @@ public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
     {
         int ownedRelikCount = CountOwnedReliks(gameData);
         int openedChestCount = CountChestOpened(gameData);
-
         relikText = "Relik: " + ownedRelikCount + " / " + totalReliks;
         chestText = "Chest: " + openedChestCount + " / " + totalChest;
         targetProgress = CalculateTotalProgress(ownedRelikCount, openedChestCount);
         progressText = "Progress: " + targetProgress.ToString("F0") + "%";
+        finalScore = gameData.finalScore;
     }
 
     private int CountOwnedReliks(GameData gameData)
@@ -81,20 +82,20 @@ public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        levelToolTip.ShowToolTip(deskripsiLevel, namaLevel, relikText, chestText, progressText);
+        levelToolTip.ShowToolTip(deskripsiLevel, namaLevel, relikText, chestText, progressText, finalScore);
         StartCoroutine(UpdateProgressBar(targetProgress));
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         levelToolTip.HideToolTip();
-        StopAllCoroutines(); // Hentikan animasi progres saat tooltip disembunyikan
+        StopAllCoroutines();
     }
 
     private IEnumerator UpdateProgressBar(float targetValue)
     {
         float currentValue = 0;
-        float duration = 1.0f; // Durasi animasi dalam detik
+        float duration = 1.0f;
         float elapsedTime = 0;
 
         while (elapsedTime < duration)
@@ -104,8 +105,6 @@ public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
             levelToolTip.totalProgress.text = "Progress: " + currentValue.ToString("F0") + "%";
             yield return null;
         }
-
-        // Pastikan nilai akhir sesuai target
         levelToolTip.totalProgress.text = "Progress: " + targetValue.ToString("F0") + "%";
     }
 }

@@ -19,7 +19,8 @@ MonoBehaviour:
   dropChance: 25
   tipeEquiment: 2
   itemCooldown: 0
-  itemEfek: []
+  itemEfek:
+  - {fileID: 11400000, guid: a9a121dd387dac284a76589bed58cf2d, type: 2}
   ketangkasan: 28
   kelincahan: 0
   kecerdasan: 0

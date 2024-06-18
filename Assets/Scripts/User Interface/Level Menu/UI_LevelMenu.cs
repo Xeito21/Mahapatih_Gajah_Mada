@@ -17,8 +17,6 @@ public class UI_LevelMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         StartCoroutine(LoadSceneMainMenu(1.5f));
     }
-
-
     public void NewGame()
     {
         AudioManager.instance.PlaySFX(25, null);
