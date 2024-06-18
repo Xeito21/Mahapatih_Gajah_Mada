@@ -35,9 +35,14 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         StartCoroutine(LoadSceneWithEffect(1.5f));
     }
 
-    public void MateriMenu()
+    public void LevelMenu()
     {
-        StartCoroutine(LoadSceneMateriMenu(1.5f));
+        StartCoroutine(LoadSceneLevelMenu(1.5f));
+    }
+
+    public void RelikMenu()
+    {
+        StartCoroutine(LoadSceneRelikMenu(1.5f));
     }
 
     public void IntroCutscene()
@@ -71,11 +76,18 @@ public class UI_MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         yield return new WaitForSeconds(_delay);
     }
 
-    IEnumerator LoadSceneMateriMenu(float _delay)
+    IEnumerator LoadSceneLevelMenu(float _delay)
     {
         fadeScreen.FadeOut();
         yield return new WaitForSeconds(_delay);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
+    }
+
+    IEnumerator LoadSceneRelikMenu(float _delay)
+    {
+        fadeScreen.FadeOut();
+        yield return new WaitForSeconds(_delay);
+        SceneManager.LoadScene(4);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

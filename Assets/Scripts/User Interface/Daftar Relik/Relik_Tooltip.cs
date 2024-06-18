@@ -16,8 +16,6 @@ public class Relik_Tooltip : UI_Tooltips
         AdjustPosition();
         AdjustFontSize(judulRelik);
         gameObject.SetActive(true);
-
-
     }
 
     public void HideToolTip()

@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1606596466}
         m_TargetAssemblyTypeName: IntroCutscene, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: LevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e13b64913c33be4d8f006f2c8a92509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MainScene
+  sceneName: LevelMenu
   fadeScreen: {fileID: 730492413}
   button: {fileID: 354993513}
   delay: 30

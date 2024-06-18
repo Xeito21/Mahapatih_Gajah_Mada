@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MateriMenu.unity
     guid: a1538b2357409224eaf5bbffdd319869
+  - enabled: 1
+    path: Assets/Scenes/RelikScene.unity
+    guid: fc5eeb708766f1644a0af8f6a2bf463d
+  - enabled: 1
+    path: Assets/Scenes/LevelMenu.unity
+    guid: 4ab3ae9fda82a6b45bf23c19d42182ee
   m_configObjects: {}

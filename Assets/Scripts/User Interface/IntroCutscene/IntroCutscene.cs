@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class IntroCutscene : MonoBehaviour
 {
-    [SerializeField] private string sceneName = "MainScene";
+    [SerializeField] private string sceneName = "LevelMenu";
     [SerializeField] UI_FadeScreen fadeScreen;
     public Button button;          
     public float delay = 30f;      
@@ -38,17 +38,15 @@ public class IntroCutscene : MonoBehaviour
         }
     }
 
-    public void NewGame()
+    public void LevelMenu()
     {
         AudioManager.instance.PlaySFX(25, null);
-        SaveManager.instance.DeleteSavedData();
         StartCoroutine(LoadSceneWithEffect(1.5f));
     }
 
     IEnumerator LoadSceneWithEffect(float _delay)
     {
         fadeScreen.FadeOut();
-
         yield return new WaitForSeconds(_delay);
         SceneManager.LoadScene(sceneName);
     }

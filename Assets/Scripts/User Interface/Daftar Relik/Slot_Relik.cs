@@ -42,7 +42,6 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (hasItem)
         {
-            // Jika pemain memiliki item, tampilkan ikon putih
             Sprite itemSprite = Resources.Load<Sprite>("Sprites/" + itemName);
             if (itemSprite != null)
             {
@@ -56,14 +55,12 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         else
         {
-            // Jika pemain tidak memiliki item, ubah warna ikon menjadi hitam
             ikonRelik.color = Color.black;
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Tampilkan tooltip sesuai kondisi pemain memiliki atau tidak memiliki item
         if (ui != null && ui.relikTooltip != null)
         {
             if (HasItem())
@@ -79,7 +76,6 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Sembunyikan tooltip
         if (ui != null && ui.relikTooltip != null)
         {
             ui.relikTooltip.HideToolTip();
@@ -88,7 +84,6 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private bool HasItem()
     {
-        // Periksa apakah pemain memiliki item tersebut
         string dataDirPath = "C:/Users/Xei/AppData/LocalLow/NusantaraLegends/Mahapatih_GajahMada/";
         string dataFileName = "data.Mahapatih";
         bool encryptData = false;
@@ -101,6 +96,6 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             return gameData.relikOwnership[itemName];
         }
 
-        return false; // Defaultnya tidak memiliki item
+        return false;
     }
 }
