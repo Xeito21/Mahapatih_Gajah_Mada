@@ -191,10 +191,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 300, y: 300}
+  m_CellSize: {x: 250, y: 250}
   m_Spacing: {x: 36.9, y: 32.11}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -280,11 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3988800afdd312191ac265daf47283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &348558097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 7396477415040261827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452134646
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +382,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452134646}
   m_CullTransparentMesh: 1
+--- !u!1 &503881760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 535558271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &531924638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 622752037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &531924642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531924638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Gobog
+  deskripsiRelik: Mata uang Gobog adalah uang logam dari Kerajaan Majapahit, terbuat
+    dari tembaga dengan bentuk bulat dan lubang segi empat di tengahnya. Ukurannya
+    bervariasi dan diduga berasal dari China abad ke-11 hingga ke-14 M. Nilainya
+    lebih rendah dari dinar dan dirham. Digunakan sebagai alat tukar sehari-hari,
+    kini langka dan mahal bagi kolektor. Selain pembayaran, juga penting dalam upacara
+    budaya dan agama serta dianggap memiliki kekuatan magis.
 --- !u!1001 &535558271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 93c403a33c6dc82458b1a5c97e097c08, type: 3}
     - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Name
@@ -496,9 +520,9 @@ PrefabInstance:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2134801792}
+      addedObject: {fileID: 2140744684}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!224 &535558272 stripped
 RectTransform:
@@ -593,20 +617,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9366667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9533334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.07666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ac51e89a7b6766e4bb2aea6e727733aa, type: 3}
     - target: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Name
-      value: Slot - Relik (3)
+      value: Slot - Gobog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 531924642}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!224 &622752038 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1610319736174318567, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
   m_PrefabInstance: {fileID: 622752037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &624121097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 7396477415040261827}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &635595193
 GameObject:
@@ -638,6 +706,7 @@ RectTransform:
   m_Children:
   - {fileID: 5677619}
   - {fileID: 452134647}
+  - {fileID: 1518237138}
   m_Father: {fileID: 1336059779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -645,6 +714,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &638547548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 774153262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &638547552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638547548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Kitab Sutasoma
+  deskripsiRelik: Kitab Sutasoma, karya Mpu Tantular pada abad ke-14, adalah karya
+    sastra berharga dari Kerajaan Majapahit yang menggabungkan cerita spiritual Pangeran
+    Sutasoma dengan ajaran filosofi, spiritualitas, dan nilai-nilai kehidupan. Sutasoma,
+    sosok bijaksana yang mencari ilmu, bertemu dengan tokoh spiritual seperti Widyadhara,
+    Bhagawan Narada, dan Dewi Tara untuk mendalami ajaran Buddha. Nilai-nilai seperti
+    Bhinneka Tunggal Ika, Moksa, Karma, Welas Asih, dan keadilan yang terdapat dalam
+    kitab ini masih relevan dalam budaya dan spiritualitas Indonesia, menjadi sumber
+    inspirasi bagi banyak seniman, budayawan, dan cendekiawan.
 --- !u!1 &662298370
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,17 +874,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662298370}
   m_CullTransparentMesh: 1
---- !u!114 &688935283 stripped
+--- !u!114 &688935286
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 7396477415040261827}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 624121097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Keris Gajah Mada
+  deskripsiRelik: Keris memainkan peran penting dalam masa pemerintahan Gajah Mada
+    di Majapahit. Keris bukan hanya senjata, tetapi juga simbol kekuatan, keberanian,
+    dan kehormatan. Gajah Mada menggunakan kerisnya dengan gagah berani dalam pertempuran
+    dan untuk mempersatukan Nusantara. Keris Majapahit tetap menjadi warisan budaya
+    yang lestari hingga saat ini, dan terus dipelajari dan dihargai oleh masyarakat
+    Indonesia.
 --- !u!1 &724395567
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,12 +922,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1511527121}
-  m_Father: {fileID: 1336059779}
+  m_Father: {fileID: 932430400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &774153262
 PrefabInstance:
@@ -914,15 +1017,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9166667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9233334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 146a1883e7c6c3c449feb45748d1f66e, type: 3}
     - target: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Name
-      value: Slot - Relik (4)
+      value: Slot - Kitab Sutasoma
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638547552}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!224 &774153263 stripped
 RectTransform:
@@ -1066,6 +1208,56 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &932430399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932430400}
+  - component: {fileID: 932430401}
+  m_Layer: 5
+  m_Name: Komponent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &932430400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932430399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1832239114}
+  - {fileID: 724395568}
+  m_Father: {fileID: 1606596465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &932430401
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932430399}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &935319435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1160,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5b4f29378224c1841ad8a7ed98472735, type: 3}
     - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Name
@@ -1175,34 +1367,15 @@ PrefabInstance:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 974603782}
+      addedObject: {fileID: 1932535450}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!224 &935319436 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1610319736174318567, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
   m_PrefabInstance: {fileID: 935319435}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &974603781 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 935319435}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &974603782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974603781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ikonRelik: {fileID: 1724645570}
-  itemName: Negarakertagama
 --- !u!1001 &1162861022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1291,15 +1464,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9366667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.9466667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.04666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.04666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1.1859016
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4.1859016
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed942ff78fe8a4841bd1cf012bc63e27, type: 3}
     - target: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Name
-      value: Slot - Relik (5)
+      value: Slot - Prasasti Canggal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_Name
+      value: Ikon Relik
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1843027212}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!224 &1162861023 stripped
 RectTransform:
@@ -1403,7 +1619,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 635595194}
-  - {fileID: 724395568}
   m_Father: {fileID: 1606596465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1499,6 +1714,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7120303053075040365, guid: 621f6e93bcb48974d93d4e01d8720bae, type: 3}
   m_PrefabInstance: {fileID: 1364300520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1406061023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406061024}
+  - component: {fileID: 1406061026}
+  - component: {fileID: 1406061025}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1406061024
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406061023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1518237138}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -43.52179}
+  m_SizeDelta: {x: 0, y: 71.7804}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1406061025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406061023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Judul Relik
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5da39adc20f1e9e75bbc61cf453c25af, type: 2}
+  m_sharedMaterial: {fileID: -1415957321056086607, guid: 5da39adc20f1e9e75bbc61cf453c25af, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 42
+  m_fontSizeBase: 42
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1406061026
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406061023}
+  m_CullTransparentMesh: 1
 --- !u!1 &1511527120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1982,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511527120}
   m_CullTransparentMesh: 1
+--- !u!1 &1518237137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518237138}
+  - component: {fileID: 1518237141}
+  - component: {fileID: 1518237140}
+  - component: {fileID: 1518237139}
+  - component: {fileID: 1518237142}
+  m_Layer: 5
+  m_Name: RelikToolTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1518237138
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518237137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1406061024}
+  - {fileID: 1953579640}
+  m_Father: {fileID: 635595194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 52.19989, y: -187.40002}
+  m_SizeDelta: {x: -1246.9485, y: -715.1761}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1518237139
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518237137}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1518237140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518237137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f203f165ae401fe46ada0ed50d07149c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1518237141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518237137}
+  m_CullTransparentMesh: 1
+--- !u!114 &1518237142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518237137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67254f8fc7d9128419bd4a6fbb2a1258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xLimit: 500
+  yLimit: 300
+  xOffset: 200
+  yOffeset: 200
+  judulRelik: {fileID: 1406061025}
+  deskripsiRelik: {fileID: 1953579641}
+  defaultNameFontSize: 40
 --- !u!1 &1606596458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +2107,7 @@ GameObject:
   - component: {fileID: 1606596461}
   - component: {fileID: 1606596467}
   - component: {fileID: 1606596466}
+  - component: {fileID: 1606596468}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1738,7 +2198,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1832239114}
+  - {fileID: 932430400}
   - {fileID: 1336059779}
   - {fileID: 341298720}
   m_Father: {fileID: 0}
@@ -1777,6 +2237,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 341298724}
   sceneName: MainMenu
+--- !u!114 &1606596468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606596458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae2c35fe2e02cc40b92c063e5bd186e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relikTooltip: {fileID: 1518237142}
 --- !u!1 &1708083597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,36 +2283,11 @@ Transform:
   - {fileID: 52863790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1724645570 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 935319435}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1771302965 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1610319736174318567, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
   m_PrefabInstance: {fileID: 7396477415040261827}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1771302966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348558097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ikonRelik: {fileID: 688935283}
-  itemName: Keris Gajah Mada
 --- !u!1 &1832239113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,12 +2318,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1606596465}
+  m_Father: {fileID: 932430400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832239115
 MonoBehaviour:
@@ -1915,36 +2363,223 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832239113}
   m_CullTransparentMesh: 1
---- !u!1 &2134801791 stripped
+--- !u!1 &1843027208 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 535558271}
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 1162861022}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2134801792
+--- !u!114 &1843027212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134801791}
+  m_GameObject: {fileID: 1843027208}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ikonRelik: {fileID: 2140744681}
-  itemName: Prasasti Kawali
---- !u!114 &2140744681 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
-  m_PrefabInstance: {fileID: 535558271}
+  itemName: Prasasti Canggal
+  deskripsiRelik: Prasasti Canggal adalah sumber informasi berharga tentang Kerajaan
+    Mataram Kuno. Ditemukan di Gunung Wukir, Dusun Canggal, Magelang, Jawa Tengah
+    pada tahun 1775, prasasti ini ditulis dalam bahasa Sanskerta dan aksara Pallawa.
+    Isinya mencatat berdirinya Kerajaan Mataram Kuno oleh Sanjaya pada tahun 732
+    M, pembangunan Candi Canggal, serta silsilah raja-raja Mataram Kuno hingga Rakai
+    Pikatan. Prasasti ini juga memberikan gambaran kehidupan masyarakat Mataram Kuno
+    yang sejahtera dan damai. Disimpan di Museum Nasional Jakarta, Prasasti Canggal
+    menjadi salah satu koleksi benda bersejarah terpenting di Indonesia.
+--- !u!1 &1932535447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+  m_PrefabInstance: {fileID: 935319435}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1932535450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932535447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Negarakertagama
+  deskripsiRelik: Kitab Negarakertagama, juga dikenal sebagai Desawarnana, adalah
+    karya sastra Jawa Kuno yang ditulis oleh Mpu Prapanca pada tahun 1365. Kitab
+    ini mengisahkan perjalanan Raja Hayam Wuruk dan kejayaan Kerajaan Majapahit pada
+    masa keemasannya. Terbagi menjadi 98 pupuh, kitab ini memuat silsilah raja-raja
+    Majapahit, upacara keagamaan, perjalanan Raja Hayam Wuruk ke berbagai wilayah
+    di Nusantara, dan gambaran kehidupan masyarakat Majapahit. Kitab ini memuji kejayaan
+    Majapahit sebagai kerajaan besar dan kuat di Nusantara. Memiliki nilai sejarah
+    yang penting sebagai sumber informasi tentang sejarah, budaya, dan kemajuan Majapahit,
+    Kitab Negarakertagama tetap menjadi sumber inspirasi bagi seniman, budayawan,
+    dan cendekiawan Indonesia.
+--- !u!1 &1953579639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953579640}
+  - component: {fileID: 1953579642}
+  - component: {fileID: 1953579641}
+  m_Layer: 5
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1953579640
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953579639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1518237138}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.03487639, y: 0.034}
+  m_AnchorMax: {x: 0.9574858, y: 0.8042232}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1953579641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953579639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised in
+    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker including
+    versions of Lorem Ipsum.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5da39adc20f1e9e75bbc61cf453c25af, type: 2}
+  m_sharedMaterial: {fileID: -1415957321056086607, guid: 5da39adc20f1e9e75bbc61cf453c25af, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 22.9
+  m_fontSizeBase: 22
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 16
+  m_fontSizeMax: 36
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1953579642
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953579639}
+  m_CullTransparentMesh: 1
+--- !u!114 &2140744684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503881760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f96323a04a9ae408fcdab57c0f48ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Prasasti Kawali
+  deskripsiRelik: Prasasti Kawali, juga dikenal sebagai Prasasti Astana Gede, merupakan
+    sekelompok prasasti yang ditemukan di situs Astana Gede, Desa Kawali, Kabupaten
+    Ciamis, Jawa Barat. Ditulis dalam bahasa Sunda Kuno dengan aksara Sunda Kuno
+    pada abad ke-14 M, prasasti ini mencatat berbagai aspek kehidupan masyarakat
+    Sunda pada masa itu, termasuk sistem pemerintahan, kehidupan sosial, ekonomi,
+    kepercayaan, dan perkembangan bahasa Sunda Kuno. Prasasti ini memiliki nilai
+    sejarah yang penting sebagai sumber informasi tentang Kerajaan Sunda, memperkuat
+    identitas budaya Sunda, dan disimpan di Museum Nasional Jakarta sebagai salah
+    satu koleksi bersejarah terpenting di Indonesia.
 --- !u!1001 &178163299865425247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2138,13 +2773,45 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.6862745
       objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348479451688401612, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b51478da1b2e5ce47bd0f12ce2ef7b58, type: 3}
     - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5810250339364720651, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_Color.b
@@ -2162,6 +2829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot - Keris Gajah Mada
       objectReference: {fileID: 0}
+    - target: {fileID: 6725546747099768239, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2175,9 +2846,9 @@ PrefabInstance:
     - {fileID: 7168964197666364133, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5995810246453866469, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1771302966}
+      addedObject: {fileID: 688935286}
   m_SourcePrefab: {fileID: 100100000, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

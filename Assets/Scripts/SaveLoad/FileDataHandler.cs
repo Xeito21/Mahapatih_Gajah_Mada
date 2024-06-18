@@ -51,7 +51,7 @@ public class FileDataHandler
     public GameData Load()
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);
-        Debug.Log("Trying to load file from: " + fullPath);
+        //Debug.Log("Trying to load file from: " + fullPath);
         GameData loadData = null;
         if (File.Exists(fullPath))
         {

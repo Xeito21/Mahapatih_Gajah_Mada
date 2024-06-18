@@ -59774,6 +59774,67 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1796131181}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[3].image
+      value: 
+      objectReference: {fileID: 21300000, guid: ac51e89a7b6766e4bb2aea6e727733aa, type: 3}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[3].title
+      value: Gobog
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[4].image
+      value: 
+      objectReference: {fileID: 21300000, guid: ed942ff78fe8a4841bd1cf012bc63e27, type: 3}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[4].title
+      value: Prasasti Canggal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[5].image
+      value: 
+      objectReference: {fileID: 21300000, guid: 146a1883e7c6c3c449feb45748d1f66e, type: 3}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[5].title
+      value: Kitab Sutasoma
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[3].description
+      value: Mata uang Gobog adalah uang logam dari Kerajaan Majapahit, terbuat dari
+        tembaga dengan bentuk bulat dan lubang segi empat di tengahnya. Ukurannya
+        bervariasi dan diduga berasal dari China abad ke-11 hingga ke-14 M. Nilainya
+        lebih rendah dari dinar dan dirham. Digunakan sebagai alat tukar sehari-hari,
+        kini langka dan mahal bagi kolektor. Selain pembayaran, juga penting dalam
+        upacara budaya dan agama serta dianggap memiliki kekuatan magis.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[4].description
+      value: Prasasti Canggal adalah sumber informasi berharga tentang Kerajaan Mataram
+        Kuno. Ditemukan di Gunung Wukir, Dusun Canggal, Magelang, Jawa Tengah pada
+        tahun 1775, prasasti ini ditulis dalam bahasa Sanskerta dan aksara Pallawa.
+        Isinya mencatat berdirinya Kerajaan Mataram Kuno oleh Sanjaya pada tahun
+        732 M, pembangunan Candi Canggal, serta silsilah raja-raja Mataram Kuno hingga
+        Rakai Pikatan. Prasasti ini juga memberikan gambaran kehidupan masyarakat
+        Mataram Kuno yang sejahtera dan damai. Disimpan di Museum Nasional Jakarta,
+        Prasasti Canggal menjadi salah satu koleksi benda bersejarah terpenting di
+        Indonesia.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443010688356636420, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+      propertyPath: infoItems.Array.data[5].description
+      value: Kitab Sutasoma, karya Mpu Tantular pada abad ke-14, adalah karya sastra
+        berharga dari Kerajaan Majapahit yang menggabungkan cerita spiritual Pangeran
+        Sutasoma dengan ajaran filosofi, spiritualitas, dan nilai-nilai kehidupan.
+        Sutasoma, sosok bijaksana yang mencari ilmu, bertemu dengan tokoh spiritual
+        seperti Widyadhara, Bhagawan Narada, dan Dewi Tara untuk mendalami ajaran
+        Buddha. Nilai-nilai seperti Bhinneka Tunggal Ika, Moksa, Karma, Welas Asih,
+        dan keadilan yang terdapat dalam kitab ini masih relevan dalam budaya dan
+        spiritualitas Indonesia, menjadi sumber inspirasi bagi banyak seniman, budayawan,
+        dan cendekiawan.
+      objectReference: {fileID: 0}
     - target: {fileID: 6623955552952213946, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
       propertyPath: m_Name
       value: Relik - Prasasti Kawali
