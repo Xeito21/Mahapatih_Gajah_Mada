@@ -30,7 +30,7 @@ public class RelikController : MonoBehaviour, ISaveManager
         {
             DisplayInfo(infoItems[0]);
         }
-        CheckItemStatus();  // Periksa status item pada saat mulai
+        CheckItemStatus();
     }
 
     public void DisplayInfo(InfoItem item)
@@ -49,8 +49,8 @@ public class RelikController : MonoBehaviour, ISaveManager
         {
             DisplayInfo(infoItems[itemIndex]);
             ShowUI(true);
-            infoItems[itemIndex].hasItem = true;  // Misalnya, menandai item sebagai diambil
-            CheckItemStatus();  // Periksa status item setelah memperbarui
+            infoItems[itemIndex].hasItem = true;
+            CheckItemStatus();
 
         }
     }
@@ -72,7 +72,7 @@ public class RelikController : MonoBehaviour, ISaveManager
                 item.hasItem = value;
             }
         }
-        CheckItemStatus();  // Periksa status item setelah memuat data
+        CheckItemStatus(); 
     }
 
     public void SaveData(ref GameData _data)
@@ -96,7 +96,6 @@ public class RelikController : MonoBehaviour, ISaveManager
         {
             if (item.hasItem)
             {
-                // Tindakan yang ingin dilakukan saat item dimiliki
                 Debug.Log($"Item {item.title} telah dimiliki.");
                 
             }
