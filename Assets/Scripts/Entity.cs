@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -15,9 +14,9 @@ public class Entity : MonoBehaviour
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
 
-    public SpriteRenderer sr {get; private set;}
-    public CharacterStats stats {get; private set;}
-    public CapsuleCollider2D cd {get; private set;}
+    public SpriteRenderer sr { get; private set; }
+    public CharacterStats stats { get; private set; }
+    public CapsuleCollider2D cd { get; private set; }
 
     [Header("KnockBack Info")]
     [SerializeField] protected Vector2 knockbackDirection = new Vector2(7, 12);
@@ -27,7 +26,7 @@ public class Entity : MonoBehaviour
 
     public int facingDir { get; private set; } = 1;
     protected bool facingRight = true;
-    public int knockBackDir {get; private set;}
+    public int knockBackDir { get; private set; }
 
     public System.Action onFlipped;
     protected virtual void Awake()
@@ -104,7 +103,7 @@ public class Entity : MonoBehaviour
         facingDir = facingDir * -1;
         facingRight = !facingRight;
         transform.Rotate(0, 180, 0);
-        if(onFlipped != null)
+        if (onFlipped != null)
             onFlipped();
     }
 
@@ -121,12 +120,12 @@ public class Entity : MonoBehaviour
 
     public virtual void Die()
     {
-        
+
     }
 
     public virtual void SetupKnockBackDir(Transform _damageDirection)
     {
-        if(_damageDirection.position.x > transform.position.x)
+        if (_damageDirection.position.x > transform.position.x)
             knockBackDir = -1;
         else if (_damageDirection.position.x < transform.position.x)
             knockBackDir = 1;

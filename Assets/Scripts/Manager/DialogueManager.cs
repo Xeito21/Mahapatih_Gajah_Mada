@@ -85,8 +85,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        //next dialogue line when pressed space
-
         if (canContinueToNextLine && currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.Space))
         {
             ContinueStory();

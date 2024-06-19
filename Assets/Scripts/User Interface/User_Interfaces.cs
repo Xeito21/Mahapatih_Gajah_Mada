@@ -18,10 +18,15 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     [SerializeField] public GameObject hudUI;
     [SerializeField] private GameObject WinUI;
     [SerializeField] private GameObject popupUI;
-
     public TextMeshProUGUI PopupTextInfo;
 
+    [Header("Tutorial")]
+    public CharacterMenu_Tutorial tutorCharacter;
+    public TutorialAnimation tutorSkill;
+    public CraftMenu_Tutorial tutorCraft;
 
+
+    [Space]
     public UI_ItemToolTips itemToolTips;
     public UI_StatToolTip statToolTip;
     public UI_CraftWindow craftWindow;
@@ -29,6 +34,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     public UI_FinishStage finishWindow;
 
     public static User_Interfaces instance;
+
 
     [SerializeField] private UI_VolumeSlider[] volumeSettings;
 
@@ -54,11 +60,24 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.C))
+        {
             SwitchWithKeyTo(characterUI);
+            popupUI.SetActive(true);
+            tutorCharacter.DisplayNextText();
+        }
         if(Input.GetKeyDown(KeyCode.V))
+        {
             SwitchWithKeyTo(craftUI);
+            popupUI.SetActive(true);
+            tutorCraft.DisplayNextText();
+        }
+            
         if(Input.GetKeyDown(KeyCode.B))
+        {
             SwitchWithKeyTo(skillTreeUI);
+            popupUI.SetActive(true);
+            tutorSkill.DisplayNextText();
+        }
         if(Input.GetKeyDown(KeyCode.N))
             SwitchWithKeyTo(optionsUI);
     }

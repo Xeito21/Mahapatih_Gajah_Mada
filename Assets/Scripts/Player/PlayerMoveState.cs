@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
 
 public class PlayerMoveState : PlayerGroundState
 {
+
     public PlayerMoveState(GajahMada _gajahMada, PlayerStateMachine _stateMachine, string _animBoolName) : base(_gajahMada, _stateMachine, _animBoolName)
     {
     }
+
+
 
     public override void Enter()
     {
@@ -29,4 +32,6 @@ public class PlayerMoveState : PlayerGroundState
         if (xInput == 0 || player.isWallDetected())
             stateMachine.ChangeState(player.idleState);
     }
+
+
 }

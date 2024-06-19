@@ -162,4 +162,5 @@ public class GajahMada : Entity
     {
         knockbackDirection = new Vector2(0,0);
     }
+
 }
