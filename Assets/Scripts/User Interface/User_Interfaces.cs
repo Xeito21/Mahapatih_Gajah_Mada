@@ -55,28 +55,53 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
         popupUI.SetActive(true);
         itemToolTips.gameObject.SetActive(false);
         statToolTip.gameObject.SetActive(false);
+        tutorCharacter.OnTutorialTextFinished += HandleTutorialTextFinished;
+        tutorCraft.OnTutorialTextFinished += HandleTutorialTextFinished;
+        tutorSkill.OnTutorialTextFinished += HandleTutorialTextFinished;
 
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            SwitchWithKeyTo(characterUI);
-            popupUI.SetActive(true);
-            tutorCharacter.DisplayNextText();
+            if(tutorCharacter.interactingCharacterTutorial == false)
+            {
+                SwitchWithKeyTo(characterUI);
+                popupUI.SetActive(true);
+                tutorCharacter.DisplayNextText();
+            }
+            else
+            {
+                SwitchWithKeyTo(characterUI);
+            }
         }
         if(Input.GetKeyDown(KeyCode.V))
         {
-            SwitchWithKeyTo(craftUI);
-            popupUI.SetActive(true);
-            tutorCraft.DisplayNextText();
+            if(tutorCraft.interactingCraftTutorial == false)
+            {
+                SwitchWithKeyTo(craftUI);
+                popupUI.SetActive(true);
+                tutorCraft.DisplayNextText();
+            }
+            else
+            {
+                SwitchWithKeyTo(craftUI);
+            }
         }
             
         if(Input.GetKeyDown(KeyCode.B))
         {
-            SwitchWithKeyTo(skillTreeUI);
-            popupUI.SetActive(true);
-            tutorSkill.DisplayNextText();
+            if (tutorSkill.isInteractingWithTutorial == false)
+            {
+                SwitchWithKeyTo(skillTreeUI);
+                popupUI.SetActive(true);
+                tutorSkill.DisplayNextText();
+            }
+            else
+            {
+                SwitchWithKeyTo(skillTreeUI);
+            }
+
         }
         if(Input.GetKeyDown(KeyCode.N))
             SwitchWithKeyTo(optionsUI);
@@ -227,5 +252,11 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
         {
             _data.volumeSettings.Add(item.parameter, item.slider.value);
         }
+    }
+
+    private void HandleTutorialTextFinished()
+    {
+        // Aktifkan kembali hudUI ketika teks tutorial selesai
+        SwitchTo(hudUI);
     }
 }

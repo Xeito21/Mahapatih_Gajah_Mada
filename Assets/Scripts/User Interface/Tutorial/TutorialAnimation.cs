@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -13,8 +14,8 @@ public class TutorialAnimation : MonoBehaviour
     public float typingSpeed = 0.05f;
     public float nextButtonDelay = 2.0f;
     public Animator guideAnimator;
-    public bool isInteractingWithTutorial { get; private set; }
-
+    public bool isInteractingWithTutorial;
+    public event Action OnTutorialTextFinished;
     private int currentIndex = -1;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -84,6 +85,9 @@ public class TutorialAnimation : MonoBehaviour
         {
             PopupWindow.gameObject.SetActive(false);
             gameObject.SetActive(false);
+
+            // Panggil event ketika tutorial selesai
+            OnTutorialTextFinished?.Invoke();
         }
 
         if (!waitForAnimation)
@@ -91,7 +95,6 @@ public class TutorialAnimation : MonoBehaviour
             isTyping = true;
         }
 
-        // Set interaction state
         isInteractingWithTutorial = true;
     }
 
@@ -135,10 +138,5 @@ public class TutorialAnimation : MonoBehaviour
     {
         yield return new WaitForSeconds(nextButtonDelay);
         nextButton.gameObject.SetActive(true);
-    }
-
-    public static TutorialAnimation GetInstance()
-    {
-        return instance;
     }
 }

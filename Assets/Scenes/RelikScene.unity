@@ -2214,6 +2214,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1364300523}
+  - {fileID: 1878106373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1771302965 stripped
@@ -2322,6 +2323,68 @@ MonoBehaviour:
     Pikatan. Prasasti ini juga memberikan gambaran kehidupan masyarakat Mataram Kuno
     yang sejahtera dan damai. Disimpan di Museum Nasional Jakarta, Prasasti Canggal
     menjadi salah satu koleksi benda bersejarah terpenting di Indonesia.
+--- !u!1001 &1878106372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1708083598}
+    m_Modifications:
+    - target: {fileID: 2520630747631722425, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_Name
+      value: SaveManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1010.0758
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 577.9043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.584488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+--- !u!4 &1878106373 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6709445819652994510, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+  m_PrefabInstance: {fileID: 1878106372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1932535447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8549559525703052192, guid: d26c0174bf8e35741bf37b906b5b6b88, type: 3}

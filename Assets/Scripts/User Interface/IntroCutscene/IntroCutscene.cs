@@ -40,6 +40,7 @@ public class IntroCutscene : MonoBehaviour
     public void NewGame()
     {
         AudioManager.instance.PlaySFX(25, null);
+        SaveManager.instance.DeleteSavedData();
         StartCoroutine(LoadSceneWithEffect(1.5f));
     }
 

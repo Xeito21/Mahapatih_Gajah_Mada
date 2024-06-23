@@ -18874,6 +18874,7 @@ MonoBehaviour:
   typingSpeed: 0.05
   nextButtonDelay: 2
   guideAnimator: {fileID: 709438481}
+  interactingCharacterTutorial: 0
   PopupWindow: {fileID: 709438479}
 --- !u!1 &711624245
 GameObject:
@@ -20441,7 +20442,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quest Telah di Ambil!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 870e1a726b06fc24dbec90ff3cac5710, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -20505,7 +20506,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -55.570557, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &766527264
@@ -22941,7 +22942,7 @@ PrefabInstance:
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].item
       value: 
-      objectReference: {fileID: 1632027787}
+      objectReference: {fileID: 2266129314489972128}
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].dropChanceRelik
       value: 1
@@ -40093,6 +40094,7 @@ MonoBehaviour:
   typingSpeed: 0.05
   nextButtonDelay: 0.05
   guideAnimator: {fileID: 1226502862}
+  isInteractingWithTutorial: 0
   PopupWindow: {fileID: 1226502860}
 --- !u!1 &1233387034
 GameObject:
@@ -41478,7 +41480,7 @@ PrefabInstance:
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].item
       value: 
-      objectReference: {fileID: 1632027787}
+      objectReference: {fileID: 2266129314489972126}
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].dropChanceRelik
       value: 1
@@ -42463,8 +42465,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Title Quest : Kill 1 / 3 Prajurit'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ee7e1a5bf3fdabb458cf37bfe80f85f4, type: 2}
-  m_sharedMaterial: {fileID: 990777060476859885, guid: ee7e1a5bf3fdabb458cf37bfe80f85f4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 870e1a726b06fc24dbec90ff3cac5710, type: 2}
+  m_sharedMaterial: {fileID: -6605273127719423641, guid: 870e1a726b06fc24dbec90ff3cac5710, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -60833,7 +60835,7 @@ PrefabInstance:
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].item
       value: 
-      objectReference: {fileID: 1632027787}
+      objectReference: {fileID: 2266129314489972127}
     - target: {fileID: 8398503962274848147, guid: 0aafb4e128918ef428ac4aa7f0d3d1fb, type: 3}
       propertyPath: dropRelik.Array.data[0].dropChanceRelik
       value: 1
@@ -63254,6 +63256,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+--- !u!1 &2266129314489972126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997062577204716556, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+  m_PrefabInstance: {fileID: 2266129314489972125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2266129314489972127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8156419259687871542, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+  m_PrefabInstance: {fileID: 2266129314489972125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2266129314489972128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1430710629879675435, guid: c6d272ba717d2b14db1f5a88d6ffee40, type: 3}
+  m_PrefabInstance: {fileID: 2266129314489972125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2318429261738978092
 PrefabInstance:
   m_ObjectHideFlags: 0

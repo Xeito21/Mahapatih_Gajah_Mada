@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class CraftMenu_Tutorial : MonoBehaviour
 {
+    [SerializeField] private GameObject PopupWindow;
     public string[] texts;
     public string[] animationTriggers;
     public TextMeshProUGUI displayText;
@@ -17,8 +19,7 @@ public class CraftMenu_Tutorial : MonoBehaviour
     private int currentIndex = -1;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
-
-    [SerializeField] private GameObject PopupWindow;
+    public event Action OnTutorialTextFinished;
 
     void Start()
     {
@@ -74,6 +75,7 @@ public class CraftMenu_Tutorial : MonoBehaviour
         {
             PopupWindow.gameObject.SetActive(false);
             gameObject.SetActive(false);
+            OnTutorialTextFinished?.Invoke();
         }
 
         if (!waitForAnimation)

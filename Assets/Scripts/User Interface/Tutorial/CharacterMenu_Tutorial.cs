@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,13 +15,14 @@ public class CharacterMenu_Tutorial : MonoBehaviour
     public float typingSpeed = 0.05f;
     public float nextButtonDelay = 2.0f;
     public Animator guideAnimator;
-    public bool interactingCharacterTutorial { get; private set; }
+    public bool interactingCharacterTutorial;
 
     private int currentIndex = -1;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
 
     [SerializeField] private GameObject PopupWindow;
+    public event Action OnTutorialTextFinished;
 
 
     private void Awake()
@@ -85,6 +87,9 @@ public class CharacterMenu_Tutorial : MonoBehaviour
         {
             PopupWindow.gameObject.SetActive(false);
             gameObject.SetActive(false);
+
+            // Panggil event ketika tutorial selesai
+            OnTutorialTextFinished?.Invoke();
         }
 
         if (!waitForAnimation)
@@ -92,7 +97,6 @@ public class CharacterMenu_Tutorial : MonoBehaviour
             isTyping = true;
         }
 
-        // Set interaction state
         interactingCharacterTutorial = true;
     }
 
@@ -138,8 +142,4 @@ public class CharacterMenu_Tutorial : MonoBehaviour
         nextButton.gameObject.SetActive(true);
     }
 
-    public static CharacterMenu_Tutorial GetInstance()
-    {
-        return instance;
-    }
 }
