@@ -36,6 +36,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     public static User_Interfaces instance;
 
 
+
     [SerializeField] private UI_VolumeSlider[] volumeSettings;
 
 
@@ -52,6 +53,9 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     void Start()
     {
         SwitchTo(hudUI);
+        tutorCharacter.LoadIsDone();
+        tutorCraft.LoadIsDone();
+        tutorSkill.LoadIsDone();
         popupUI.SetActive(true);
         itemToolTips.gameObject.SetActive(false);
         statToolTip.gameObject.SetActive(false);
@@ -64,7 +68,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            if(tutorCharacter.interactingCharacterTutorial == false)
+            if(tutorCharacter.isTutorialCharacterDone == false)
             {
                 SwitchWithKeyTo(characterUI);
                 popupUI.SetActive(true);
@@ -77,7 +81,7 @@ public class User_Interfaces : MonoBehaviour,ISaveManager
         }
         if(Input.GetKeyDown(KeyCode.V))
         {
-            if(tutorCraft.interactingCraftTutorial == false)
+            if(tutorCraft.isTutorialCraftDone == false)
             {
                 SwitchWithKeyTo(craftUI);
                 popupUI.SetActive(true);

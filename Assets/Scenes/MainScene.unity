@@ -18874,7 +18874,8 @@ MonoBehaviour:
   typingSpeed: 0.05
   nextButtonDelay: 2
   guideAnimator: {fileID: 709438481}
-  interactingCharacterTutorial: 0
+  isTutorialCharacterDone: 0
+  isInteractingCharacter: 0
   PopupWindow: {fileID: 709438479}
 --- !u!1 &711624245
 GameObject:
@@ -33207,6 +33208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49eb81f35a5b9b54bb7e7edb294fd5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopupWindow: {fileID: 1094329691}
   texts:
   - ini adalah tampilan untuk craft
   - craft adalah proses di mana anda menggabungkan berbagai bahan atau material yang
@@ -33232,8 +33234,8 @@ MonoBehaviour:
   typingSpeed: 0.05
   nextButtonDelay: 2
   guideAnimator: {fileID: 1094329694}
-  interactingCraftTutorial: 0
-  PopupWindow: {fileID: 1094329691}
+  isTutorialCraftDone: 0
+  isInteractingCraft: 0
 --- !u!95 &1094329694
 Animator:
   serializedVersion: 5
@@ -40065,7 +40067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - Menu kedua adalah skill tree
+  - ini adalah tampilan menu skill tree
   - Skill tree dalam game adalah representasi visual atau struktur yang menunjukkan
     pilihan dan kemajuan dalam pengembangan karakter atau pemain dalam permainan.
   - Setiap cabang dalam skill tree biasanya mewakili jenis-jenis keterampilan atau
