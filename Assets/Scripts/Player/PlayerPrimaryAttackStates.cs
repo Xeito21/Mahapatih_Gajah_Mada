@@ -31,7 +31,7 @@ public class PlayerPrimaryAttackStates : PlayerState
         #endregion
 
 
-        player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
+        //player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
 
         stateTimer = .1f;
     }

@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2520630747631722425, guid: 1870eadc372584f2985251beb2449d48, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4048129996314868865, guid: 1870eadc372584f2985251beb2449d48, type: 3}
       propertyPath: encryptData
       value: 0

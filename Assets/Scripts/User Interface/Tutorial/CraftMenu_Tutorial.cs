@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +14,8 @@ public class CraftMenu_Tutorial : MonoBehaviour
     public float typingSpeed = 0.05f;
     public float nextButtonDelay = 2.0f;
     public Animator guideAnimator;
-    public bool interactingCraftTutorial;
+    public bool isTutorialCraftDone;
+    public bool isInteractingCraft;
     private int currentIndex = -1;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -23,7 +23,6 @@ public class CraftMenu_Tutorial : MonoBehaviour
 
     void Start()
     {
-        interactingCraftTutorial = false;
         currentIndex = -1;
         nextButton.gameObject.SetActive(false);
 
@@ -84,7 +83,8 @@ public class CraftMenu_Tutorial : MonoBehaviour
         }
 
         // Set interaction state
-        interactingCraftTutorial = true;
+        isTutorialCraftDone = true;
+        SaveIsDone();
     }
 
     private void PlayAnimationIfAny()
@@ -128,4 +128,16 @@ public class CraftMenu_Tutorial : MonoBehaviour
         yield return new WaitForSeconds(nextButtonDelay);
         nextButton.gameObject.SetActive(true);
     }
+
+    private void SaveIsDone()
+    {
+        PlayerPrefs.SetInt("isTutorialCraftDone", isTutorialCraftDone ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadIsDone()
+    {
+        isTutorialCraftDone = PlayerPrefs.GetInt("isTutorialCraftDone", 0) == 1;
+    }
+
 }

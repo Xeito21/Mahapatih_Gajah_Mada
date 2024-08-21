@@ -36,16 +36,16 @@ public class HUD_UI : MonoBehaviour
     void Update()
     {
         GobogUpdateUI();
-        if (Input.GetKeyDown(KeyCode.L) && skills.dash.dashUnlocked)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && skills.dash.dashUnlocked)
             SetCoolDownOf(dashImage);
 
-        if (Input.GetKeyDown(KeyCode.I) && skills.parry.vitalParryUnlocked)
+        if (Input.GetMouseButtonDown(1) && skills.parry.vitalParryUnlocked)
             SetCoolDownOf(parryImage);
 
         if (Input.GetKeyDown(KeyCode.F) && skills.crystal.crystalUnlocked)
             SetCoolDownOf(crystalImage);
 
-        if (Input.GetKeyDown(KeyCode.O) && skills.sword.swordUnlocked)
+        if (Input.GetKeyDown(KeyCode.Q) && skills.sword.swordUnlocked)
             SetCoolDownOf(swordImage);
 
         if (Input.GetKeyDown(KeyCode.R) && skills.lighthole.vortexUnlocked)

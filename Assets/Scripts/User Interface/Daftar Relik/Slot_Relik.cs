@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Relik_UI ui;
-    [SerializeField] private string itemName;
+    [SerializeField] public string itemName;
     [TextArea]
     [SerializeField] private string deskripsiRelik;
     private Image ikonRelik;
@@ -14,11 +14,18 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         ikonRelik = GetComponentInChildren<Image>();
         ui = GetComponentInParent<Relik_UI>();
-        string dataDirPath = "C:/Users/Xei/AppData/LocalLow/NusantaraLegends/Mahapatih_GajahMada/";
-        string dataFileName = "data.Mahapatih";
+
+        LoadGame();
+    }
+
+    private void LoadGame()
+    {
+        string fileName = "data.Mahapatih";
         bool encryptData = false;
 
-        FileDataHandler dataHandler = new FileDataHandler(dataDirPath, dataFileName, encryptData);
+        // Menggunakan Application.persistentDataPath untuk path direktori
+        string dataDirPath = Application.persistentDataPath;
+        FileDataHandler dataHandler = new FileDataHandler(dataDirPath, fileName, encryptData);
         GameData gameData = dataHandler.Load();
 
         if (gameData != null)
@@ -38,7 +45,7 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
     }
 
-    private void ShowItem(bool hasItem)
+    public void ShowItem(bool hasItem)
     {
         if (hasItem)
         {
@@ -84,11 +91,10 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private bool HasItem()
     {
-        string dataDirPath = "C:/Users/Xei/AppData/LocalLow/NusantaraLegends/Mahapatih_GajahMada/";
-        string dataFileName = "data.Mahapatih";
+        string fileName = "data.Mahapatih";
         bool encryptData = false;
-
-        FileDataHandler dataHandler = new FileDataHandler(dataDirPath, dataFileName, encryptData);
+        string dataDirPath = Application.persistentDataPath;
+        FileDataHandler dataHandler = new FileDataHandler(dataDirPath, fileName, encryptData);
         GameData gameData = dataHandler.Load();
 
         if (gameData != null && gameData.relikOwnership.ContainsKey(itemName))
@@ -98,4 +104,5 @@ public class Slot_Relik : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         return false;
     }
+
 }

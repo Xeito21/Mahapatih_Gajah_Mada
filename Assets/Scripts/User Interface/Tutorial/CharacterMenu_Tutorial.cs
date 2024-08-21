@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterMenu_Tutorial : MonoBehaviour
 {
-    private static CharacterMenu_Tutorial instance;
     public string[] texts;
     public string[] animationTriggers;
     public TextMeshProUGUI displayText;
@@ -15,8 +14,7 @@ public class CharacterMenu_Tutorial : MonoBehaviour
     public float typingSpeed = 0.05f;
     public float nextButtonDelay = 2.0f;
     public Animator guideAnimator;
-    public bool interactingCharacterTutorial;
-
+    public bool isTutorialCharacterDone;
     private int currentIndex = -1;
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -25,17 +23,8 @@ public class CharacterMenu_Tutorial : MonoBehaviour
     public event Action OnTutorialTextFinished;
 
 
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("Found more than one dialogue manager in the scene");
-        }
-        instance = this;
-    }
     void Start()
     {
-        interactingCharacterTutorial = false;
         currentIndex = -1;
         nextButton.gameObject.SetActive(false);
 
@@ -97,7 +86,8 @@ public class CharacterMenu_Tutorial : MonoBehaviour
             isTyping = true;
         }
 
-        interactingCharacterTutorial = true;
+        isTutorialCharacterDone = true;
+        SaveIsDone();
     }
 
     private void PlayAnimationIfAny()
@@ -140,6 +130,17 @@ public class CharacterMenu_Tutorial : MonoBehaviour
     {
         yield return new WaitForSeconds(nextButtonDelay);
         nextButton.gameObject.SetActive(true);
+    }
+
+    private void SaveIsDone()
+    {
+        PlayerPrefs.SetInt("isTutorialCharacterDone", isTutorialCharacterDone ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadIsDone()
+    {
+        isTutorialCharacterDone = PlayerPrefs.GetInt("isTutorialCharacterDone", 0) == 1;
     }
 
 }

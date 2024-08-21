@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
+public class Level_Pertama : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Level_ToolTip levelToolTip;
     private int totalReliks = 6;
@@ -20,9 +20,11 @@ public class Level_Pertama : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
 
     void Start()
     {
-        string dataDirPath = "C:/Users/Xei/AppData/LocalLow/NusantaraLegends/Mahapatih_GajahMada/";
+        // Menggunakan Application.persistentDataPath untuk path direktori
+        string dataDirPath = Application.persistentDataPath;
         string dataFileName = "data.Mahapatih";
         bool encryptData = false;
+
         FileDataHandler dataHandler = new FileDataHandler(dataDirPath, dataFileName, encryptData);
         GameData gameData = dataHandler.Load();
 

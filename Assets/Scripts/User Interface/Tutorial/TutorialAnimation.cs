@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TutorialAnimation : MonoBehaviour
 {
-    private static TutorialAnimation instance;
     public string[] texts;
     public string[] animationTriggers;
     public TextMeshProUGUI displayText;
@@ -23,17 +22,8 @@ public class TutorialAnimation : MonoBehaviour
     [SerializeField] private GameObject PopupWindow;
 
 
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("Found more than one dialogue manager in the scene");
-        }
-        instance = this;
-    }
     void Start()
     {
-        isInteractingWithTutorial = false;
         currentIndex = -1;
         nextButton.gameObject.SetActive(false);
 
@@ -96,6 +86,7 @@ public class TutorialAnimation : MonoBehaviour
         }
 
         isInteractingWithTutorial = true;
+        SaveIsDone();
     }
 
     private void PlayAnimationIfAny()
@@ -138,5 +129,16 @@ public class TutorialAnimation : MonoBehaviour
     {
         yield return new WaitForSeconds(nextButtonDelay);
         nextButton.gameObject.SetActive(true);
+    }
+
+    private void SaveIsDone()
+    {
+        PlayerPrefs.SetInt("isInteractingWithTutorial", isInteractingWithTutorial ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadIsDone()
+    {
+        isInteractingWithTutorial = PlayerPrefs.GetInt("isInteractingWithTutorial", 0) == 1;
     }
 }
