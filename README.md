@@ -50,7 +50,7 @@ Game ini tersedia untuk diunduh dan dimainkan di perangkat PC saja.
 
 #### Bagaimana cara berkontribusi pada pengembangan game ini?
 
-Anda dapat memberikan masukan dan saran melalui fitur feedback di dalam game atau menghubungi saya langsung melalui email ahmadarief602@gmail.com .
+Anda dapat berkontribusi atau untuk bahan penelitian bisa menghubungi saya langsung melalui email ahmadarief602@gmail.com .
 
 
 
